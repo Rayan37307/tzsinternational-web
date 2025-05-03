@@ -10,7 +10,7 @@ import {
 export default function About() {
   return (
     <section
-      className="py-16 bg-gradient-to-b from-slate-950 to-slate-900"
+      className="py-4 bg-gradient-to-b from-slate-950 to-slate-900"
       id="about"
     >
       <div className="container mx-auto px-4">
@@ -26,29 +26,22 @@ export default function About() {
           <div className="w-full md:w-1/2 md:pl-12">
             <ScrollReveal direction="right" delay={0.2}>
               <p className="text-gray-300 mb-6">
-                At Tzsinternational, we're passionate about creating
-                unforgettable travel experiences. With years of expertise in the
-                industry, we've been helping travelers explore the world,
-                discover new cultures, and create lasting memories.
+              TZS International is a premier consultancy specializing in global mobility solutions, including travel services, international recruitment, and study abroad programs. With years of industry expertise, we provide end-to-end support for visa processing, work permits, educational placements, and tailored travel experiences.
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.4}>
               <p className="text-gray-300 mb-6">
-                Our team of experienced travel professionals is dedicated to
-                providing personalized service, expert advice, and seamless
-                travel arrangements. Whether you're planning a relaxing beach
-                getaway, an adventurous trek, or a cultural city tour, we're
-                here to make your travel dreams a reality.
+              Our Dhaka-based team is dedicated to simplifying cross-border journeys—whether for tourism, employment, or education—through personalized service and compliance-focused guidance. We take pride in connecting Bangladeshi clients with opportunities worldwide while maintaining the highest standards of integrity and professionalism. From Hajj pilgrimages to skilled worker placements, TZS International bridges aspirations with global possibilities.
               </p>
             </ScrollReveal>
 
             <StaggerContainer>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Customized travel packages</li>
-                <li>24/7 customer support</li>
-                <li>Competitive prices</li>
-                <li>Sustainable travel options</li>
+                <li>Trusted since 2018</li>
+                <li>Offices in Gulshan, Dhaka</li>
+                <li>Specializes in visas, manpower, and education abroad</li>
+                <li>End-to-end legal/documentation support</li>
               </ul>
             </StaggerContainer>
           </div>

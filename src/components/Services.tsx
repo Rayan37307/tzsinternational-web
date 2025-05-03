@@ -1,6 +1,6 @@
 "use client";
 
-import { Plane, Globe, CreditCard, Users, Clock, Shield } from "lucide-react";
+import { Plane, Globe, CreditCard, Users, Clock, Shield, FileSearch, Ticket, HeartPulse, Briefcase, UserCog, GraduationCap, Church as Qaba } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -25,44 +25,76 @@ export default function Services() {
     {
       icon: <Plane size={28} />,
       title: "International Tours",
-      description:
-        "Explore exotic destinations around the world with our carefully curated international tour packages.",
+      description: "Explore exotic destinations around the world with our carefully curated international tour packages."
     },
     {
       icon: <Globe size={28} />,
       title: "Visa Assistance",
-      description:
-        "Get expert assistance with visa applications for any country, making your travel planning hassle-free.",
+      description: "Get expert assistance with visa applications for any country, making your travel planning hassle-free."
     },
     {
       icon: <CreditCard size={28} />,
       title: "Flexible Payment",
-      description:
-        "Enjoy flexible payment options including installment plans to make your dream vacation affordable.",
+      description: "Enjoy flexible payment options including installment plans to make your dream vacation affordable."
     },
     {
       icon: <Users size={28} />,
       title: "Group Tours",
-      description:
-        "Join our group tours to meet fellow travelers and enjoy special rates for group bookings.",
+      description: "Join our group tours to meet fellow travelers and enjoy special rates for group bookings."
     },
     {
       icon: <Clock size={28} />,
       title: "Quick Processing",
-      description:
-        "Experience fast processing times for all your travel documents and bookings.",
+      description: "Experience fast processing times for all your travel documents and bookings."
     },
     {
       icon: <Shield size={28} />,
       title: "Travel Insurance",
-      description:
-        "Travel with peace of mind with our comprehensive travel insurance coverage options.",
+      description: "Travel with peace of mind with our comprehensive travel insurance coverage options."
     },
+    // Travel Agency Services
+    {
+      icon: <Ticket size={28} />,
+      title: "Air Ticketing",
+      description: "Book flights at competitive prices with 24/7 support for changes or cancellations."
+    },
+    {
+      icon: <HeartPulse size={28} />,
+      title: "Medical Tourism",
+      description: "Access world-class healthcare facilities abroad with tailored travel and treatment packages."
+    },
+    // Recruiting Services
+    {
+      icon: <Briefcase size={28} />,
+      title: "Work Visa",
+      description: "Secure work visas for countries like Canada, Germany, and the UAE with legal guidance."
+    },
+    {
+      icon: <UserCog size={28} />,
+      title: "Manpower Recruitment",
+      description: "We connect skilled workers with international employers, handling contracts and relocation."
+    },
+    // Study Abroad Services
+    {
+      icon: <GraduationCap size={28} />,
+      title: "Study Abroad",
+      description: "Get admission to top universities worldwide with scholarship and accommodation support."
+    },
+    {
+      icon: <Qaba size={28} />,
+      title: "Hajj & Umrah",
+      description: "Organized pilgrimage packages with visa processing, flights, and luxury accommodations."
+    },
+    {
+      icon: <FileSearch size={28} />,
+      title: "Visa Processing",
+      description: "End-to-end visa services for students, tourists, and professionals with a 98% success rate."
+    }
   ];
 
   return (
     <section
-      className="py-24 bg-gradient-to-b from-slate-950 to-slate-900"
+      className="py-4 bg-gradient-to-b from-slate-950 to-slate-900"
       id="services"
     >
       <div className="container mx-auto px-4">

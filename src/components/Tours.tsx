@@ -32,7 +32,7 @@ export default function Tours() {
   }, []);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-950 to-slate-900">
+    <section className="py-6 bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>

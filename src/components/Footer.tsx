@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Globe } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,103 +13,86 @@ export default function Footer() {
             <div className="mb-4">
               <Image
                 src="/logo.png"
-                alt="Tzsinternational"
+                alt="TZS International"
                 width={160}
                 height={40}
                 className="h-10 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6">
-              Your trusted partner for international travel and education,
-              creating unforgettable experiences since 2010.
+              Your trusted partner for international travel, recruitment, and education services.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
+              <Link href="#"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
+                <Facebook size={16} />
+              </Link>
+              <Link href="#"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
+                <Twitter size={16} />
+              </Link>
+              <Link href="#"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
-                <span className="text-xs font-bold">FB</span>
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
+                <Instagram size={16} />
+              </Link>
+              <Link href="#"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
-                <span className="text-xs font-bold">TW</span>
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
-              >
-                <span className="text-xs font-bold">IG</span>
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
-              >
-                <span className="text-xs font-bold">LI</span>
-              </a>
+                <Linkedin size={16} />
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Our Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-5 text-white">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tours"
-                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                  Tours
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#about"
-                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-5 text-white">Our Services</h4>
+            <div className="grid grid-cols-1 gap-4">
+              <div>
+                <h5 className="text-secondary-400 font-medium mb-2">Travel Agency</h5>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Air Ticketing
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Medical Tourism
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-secondary-400 font-medium mb-2">Recruiting</h5>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Work Visa
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Manpower Recruitment
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-secondary-400 font-medium mb-2">Study Abroad</h5>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Hajj & Umrah
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Visa Processing
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-5 text-white">
-              Contact Us
-            </h4>
+            <h4 className="text-lg font-semibold mb-5 text-white">Location</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin
@@ -116,7 +100,9 @@ export default function Footer() {
                   size={18}
                 />
                 <span className="text-gray-400">
-                  123 Main Street, City, Country
+                  Khandakar Amin Uddin Bhaban, Lift-5 Madhani Avenue,<br />
+                  100 Fit, Notun Bazar Vatara,<br />
+                  Gulshan, Dhaka-1212, Bangladesh
                 </span>
               </li>
               <li className="flex items-center">
@@ -124,14 +110,30 @@ export default function Footer() {
                   className="text-secondary-500 mr-3 flex-shrink-0"
                   size={18}
                 />
-                <span className="text-gray-400">+1 234 567 890</span>
+                <Link href="tel:+8801731883700" className="text-gray-400 hover:text-secondary-300">
+                  +880 1731-883700
+                </Link>
               </li>
               <li className="flex items-center">
                 <Mail
                   className="text-secondary-500 mr-3 flex-shrink-0"
                   size={18}
                 />
-                <span className="text-gray-400">info@tzsinternational.com</span>
+                <Link  href="mailto:tzsinternationalbd@gmail.com" className="text-gray-400 hover:text-secondary-300">
+                  tzsinternationalbd@gmail.com
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Globe className="text-secondary-500 mr-3 flex-shrink-0" size={18} />
+                <Link href="https://tzsinternationalbd.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary-300">
+                  tzsinternationalbd.com
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Globe className="text-secondary-500 mr-3 flex-shrink-0" size={18} />
+                <Link href="https://dreamersclick.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary-300">
+                  dreamersclick.com
+                </Link>
               </li>
             </ul>
           </div>
@@ -139,11 +141,25 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-semibold mb-5 text-white">
-              Newsletter
+              Connect With TZS International
             </h4>
             <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter to receive updates and travel tips.
+              Follow us for updates on travel opportunities, visa news, and special offers.
             </p>
+            <div className="mb-4">
+              <span className="text-gray-400">Socials:</span>
+              <div className="flex mt-2 space-x-2">
+                <Link href="#" className="text-gray-400 hover:text-secondary-300"> 
+                  @tzs.international
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-secondary-300">
+                  @TZSInternational
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-secondary-300">
+                  @tzsinternational
+                </Link>
+              </div>
+            </div>
             <form className="flex">
               <input
                 type="email"
@@ -163,8 +179,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Tzsinternational. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} TZS International. All rights reserved.
           </p>
         </div>
       </div>

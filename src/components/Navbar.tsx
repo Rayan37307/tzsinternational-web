@@ -19,7 +19,7 @@ const menuItems = [
 
   {
     name: "Services",
-    href: "/#services",
+    href: "#services",
   },
 
   {
@@ -34,12 +34,12 @@ const menuItems = [
 
   {
     name: "About",
-    href: "/#about",
+    href: "#about",
   },
 
   {
     name: "Contact",
-    href: "/#contact",
+    href: "#contact",
   },
 ];
 

@@ -22,7 +22,7 @@ export default function Contact() {
     setFormData({ name: "", email: "", message: "" });
   };
   return (
-    <section className="py-16 bg-slate-950" id="contact">
+    <section className="py-4 bg-slate-950" id="contact">
       {" "}
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-gray-100">
