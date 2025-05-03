@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-20 md:pt-24">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-800/90 to-primary-700/80 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 to-slate-900/90 z-10" />
 
       {/* Background image with parallax effect */}
       <ParallaxElement className="absolute inset-0" speed={-0.2}>
@@ -76,7 +76,7 @@ export default function Hero() {
           {/* Featured tours card */}
           <div className="w-full lg:w-1/2 lg:pl-12">
             <ScrollReveal direction="left" delay={0.3}>
-              <div className="bg-gradient-to-br from-primary-700/50 to-primary-600/40 backdrop-blur-md p-6 rounded-xl border border-primary-600/50 shadow-xl">
+              <div className="bg-gradient-to-br from-slate-800/70 to-slate-900/60 backdrop-blur-md p-6 rounded-xl border border-slate-700/50 shadow-xl">
                 <AnimatedText
                   as="h3"
                   className="text-xl font-semibold text-white mb-4"
@@ -108,9 +108,9 @@ export default function Hero() {
                   ].map((tour, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-4 p-3 rounded-lg mb-3 hover:bg-primary-600/40 transition-colors cursor-pointer"
+                      className="flex items-center gap-4 p-3 rounded-lg mb-3 hover:bg-slate-800/70 transition-colors cursor-pointer"
                     >
-                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-primary-700/50">
+                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-slate-800/70">
                         <Image
                           src={`/destination-${index + 1}.jpg`}
                           alt={tour.name}

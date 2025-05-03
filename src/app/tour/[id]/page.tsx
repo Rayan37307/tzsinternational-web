@@ -66,7 +66,7 @@ export default function TourDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-secondary-500"></div>
         </div>
         <Footer />
@@ -78,16 +78,16 @@ export default function TourDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
-            <div className="text-red-500 text-5xl mb-4">⚠️</div>
-            <h2 className="text-2xl font-bold text-primary-900 mb-2">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
+          <div className="bg-slate-900 p-8 rounded-lg shadow-md max-w-md w-full text-center border border-slate-800">
+            <div className="text-red-400 text-5xl mb-4">⚠️</div>
+            <h2 className="text-2xl font-bold text-gray-100 mb-2">
               Error Loading Tour
             </h2>
-            <p className="text-primary-600 mb-6">{error}</p>
+            <p className="text-gray-400 mb-6">{error}</p>
             <button
               onClick={() => router.back()}
-              className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+              className="px-4 py-2 bg-secondary-600 text-white rounded-md hover:bg-secondary-700 transition-colors"
             >
               Go Back
             </button>
@@ -102,19 +102,19 @@ export default function TourDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
+          <div className="bg-slate-900 p-8 rounded-lg shadow-md max-w-md w-full text-center border border-slate-800">
             <div className="text-yellow-500 text-5xl mb-4">🔍</div>
-            <h2 className="text-2xl font-bold text-primary-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-100 mb-2">
               Tour Not Found
             </h2>
-            <p className="text-primary-600 mb-6">
+            <p className="text-gray-400 mb-6">
               The tour package you're looking for doesn't exist or has been
               removed.
             </p>
             <Link
               href="/tours"
-              className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+              className="px-4 py-2 bg-secondary-600 text-white rounded-md hover:bg-secondary-700 transition-colors"
             >
               Browse All Tours
             </Link>
@@ -181,7 +181,7 @@ export default function TourDetailsPage({
   return (
     <>
       <Navbar />
-      <main className="bg-gray-50 pt-24 pb-16">
+      <main className="bg-slate-950 pt-24 pb-16">
         {/* Hero Section */}
         <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] mb-8">
           <div className="absolute inset-0">
@@ -229,14 +229,14 @@ export default function TourDetailsPage({
             {/* Main Content */}
             <div className="lg:col-span-2">
               {/* Tabs */}
-              <div className="bg-white rounded-xl shadow-sm mb-6 overflow-hidden">
-                <div className="flex border-b">
+              <div className="bg-slate-900 rounded-xl shadow-sm mb-6 overflow-hidden border border-slate-800">
+                <div className="flex border-b border-slate-800">
                   <button
                     onClick={() => setActiveTab("overview")}
                     className={`px-4 py-3 font-medium text-sm flex-1 text-center ${
                       activeTab === "overview"
-                        ? "text-primary-600 border-b-2 border-primary-600"
-                        : "text-gray-500 hover:text-primary-600"
+                        ? "text-secondary-400 border-b-2 border-secondary-500"
+                        : "text-gray-400 hover:text-secondary-400"
                     }`}
                   >
                     Overview
@@ -245,8 +245,8 @@ export default function TourDetailsPage({
                     onClick={() => setActiveTab("itinerary")}
                     className={`px-4 py-3 font-medium text-sm flex-1 text-center ${
                       activeTab === "itinerary"
-                        ? "text-primary-600 border-b-2 border-primary-600"
-                        : "text-gray-500 hover:text-primary-600"
+                        ? "text-secondary-400 border-b-2 border-secondary-500"
+                        : "text-gray-400 hover:text-secondary-400"
                     }`}
                   >
                     Itinerary
@@ -255,8 +255,8 @@ export default function TourDetailsPage({
                     onClick={() => setActiveTab("inclusions")}
                     className={`px-4 py-3 font-medium text-sm flex-1 text-center ${
                       activeTab === "inclusions"
-                        ? "text-primary-600 border-b-2 border-primary-600"
-                        : "text-gray-500 hover:text-primary-600"
+                        ? "text-secondary-400 border-b-2 border-secondary-500"
+                        : "text-gray-400 hover:text-secondary-400"
                     }`}
                   >
                     Inclusions
@@ -267,14 +267,14 @@ export default function TourDetailsPage({
                   {/* Overview Tab */}
                   {activeTab === "overview" && (
                     <div>
-                      <h2 className="text-xl font-semibold text-primary-900 mb-4">
+                      <h2 className="text-xl font-semibold text-gray-100 mb-4">
                         Tour Overview
                       </h2>
-                      <p className="text-primary-700 mb-6 leading-relaxed">
+                      <p className="text-gray-400 mb-6 leading-relaxed">
                         {tour.description}
                       </p>
 
-                      <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                      <h3 className="text-lg font-semibold text-gray-100 mb-3">
                         Highlights
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
@@ -291,17 +291,15 @@ export default function TourDetailsPage({
                               size={18}
                               className="text-green-500 mr-2 mt-0.5 flex-shrink-0"
                             />
-                            <span className="text-primary-700">
-                              {highlight}
-                            </span>
+                            <span className="text-gray-400">{highlight}</span>
                           </div>
                         ))}
                       </div>
 
-                      <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                      <h3 className="text-lg font-semibold text-gray-100 mb-3">
                         Location
                       </h3>
-                      <p className="text-primary-700 mb-6 leading-relaxed">
+                      <p className="text-gray-400 mb-6 leading-relaxed">
                         This tour takes place in {tour.location}, known for its
                         stunning landscapes, rich cultural heritage, and
                         unforgettable experiences. You'll explore both popular
@@ -314,20 +312,20 @@ export default function TourDetailsPage({
                   {/* Itinerary Tab */}
                   {activeTab === "itinerary" && (
                     <div>
-                      <h2 className="text-xl font-semibold text-primary-900 mb-4">
+                      <h2 className="text-xl font-semibold text-gray-100 mb-4">
                         Tour Itinerary
                       </h2>
                       <div className="space-y-6">
                         {itinerary.slice(0, tour.duration).map((day, index) => (
                           <div
                             key={index}
-                            className="relative pl-8 pb-6 border-l-2 border-primary-100 last:border-0 last:pb-0"
+                            className="relative pl-8 pb-6 border-l-2 border-slate-800 last:border-0 last:pb-0"
                           >
-                            <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary-500"></div>
-                            <h3 className="text-lg font-semibold text-primary-900">
+                            <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary-500"></div>
+                            <h3 className="text-lg font-semibold text-gray-100">
                               Day {day.day}: {day.title}
                             </h3>
-                            <p className="text-primary-700 mt-2">
+                            <p className="text-gray-400 mt-2">
                               {day.description}
                             </p>
                           </div>
@@ -340,7 +338,7 @@ export default function TourDetailsPage({
                   {activeTab === "inclusions" && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div>
-                        <h2 className="text-xl font-semibold text-primary-900 mb-4 flex items-center">
+                        <h2 className="text-xl font-semibold text-gray-100 mb-4 flex items-center">
                           <Check size={20} className="text-green-500 mr-2" />
                           What's Included
                         </h2>
@@ -351,14 +349,14 @@ export default function TourDetailsPage({
                                 size={16}
                                 className="text-green-500 mr-2 mt-1 flex-shrink-0"
                               />
-                              <span className="text-primary-700">{item}</span>
+                              <span className="text-gray-400">{item}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       <div>
-                        <h2 className="text-xl font-semibold text-primary-900 mb-4 flex items-center">
+                        <h2 className="text-xl font-semibold text-gray-100 mb-4 flex items-center">
                           <Info size={20} className="text-red-500 mr-2" />
                           What's Not Included
                         </h2>
@@ -368,7 +366,7 @@ export default function TourDetailsPage({
                               <span className="text-red-500 mr-2 mt-1 font-bold flex-shrink-0">
                                 ×
                               </span>
-                              <span className="text-primary-700">{item}</span>
+                              <span className="text-gray-400">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -379,15 +377,15 @@ export default function TourDetailsPage({
               </div>
 
               {/* Gallery */}
-              <div className="bg-white rounded-xl shadow-sm p-6">
-                <h2 className="text-xl font-semibold text-primary-900 mb-4">
+              <div className="bg-slate-900 rounded-xl shadow-sm p-6 border border-slate-800">
+                <h2 className="text-xl font-semibold text-gray-100 mb-4">
                   Tour Gallery
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {[1, 2, 3, 4, 5, 6].map((num) => (
                     <div
                       key={num}
-                      className="relative h-24 md:h-32 rounded-lg overflow-hidden"
+                      className="relative h-24 md:h-32 rounded-lg overflow-hidden border border-slate-800"
                     >
                       <Image
                         src={tour.coverImage.url}
@@ -404,14 +402,14 @@ export default function TourDetailsPage({
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Booking Card */}
-              <div className="bg-white rounded-xl shadow-sm overflow-hidden sticky top-24">
-                <div className="p-6 border-b border-gray-100">
+              <div className="bg-slate-900 rounded-xl shadow-sm overflow-hidden sticky top-24 border border-slate-800">
+                <div className="p-6 border-b border-slate-800">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-primary-900">
+                      <span className="text-3xl font-bold text-gray-100">
                         ${tour.price}
                       </span>
-                      <span className="text-primary-600">/ person</span>
+                      <span className="text-gray-400">/ person</span>
                     </div>
                     <div className="flex items-center text-yellow-500">
                       <Star size={18} className="fill-current" />
@@ -423,21 +421,19 @@ export default function TourDetailsPage({
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gray-50 p-3 rounded-lg">
-                      <div className="text-xs text-primary-600 mb-1">
-                        Duration
-                      </div>
-                      <div className="font-medium text-primary-900 flex items-center">
-                        <Clock size={16} className="mr-1 text-primary-600" />
+                    <div className="bg-slate-800 p-3 rounded-lg">
+                      <div className="text-xs text-gray-400 mb-1">Duration</div>
+                      <div className="font-medium text-gray-300 flex items-center">
+                        <Clock size={16} className="mr-1 text-secondary-400" />
                         {tour.duration} days
                       </div>
                     </div>
-                    <div className="bg-gray-50 p-3 rounded-lg">
-                      <div className="text-xs text-primary-600 mb-1">
+                    <div className="bg-slate-800 p-3 rounded-lg">
+                      <div className="text-xs text-gray-400 mb-1">
                         Group Size
                       </div>
-                      <div className="font-medium text-primary-900 flex items-center">
-                        <Users size={16} className="mr-1 text-primary-600" />
+                      <div className="font-medium text-gray-300 flex items-center">
+                        <Users size={16} className="mr-1 text-secondary-400" />
                         Max 12 people
                       </div>
                     </div>
@@ -449,23 +445,23 @@ export default function TourDetailsPage({
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-100 mb-3">
                     Need Help?
                   </h3>
-                  <p className="text-primary-600 text-sm mb-4">
+                  <p className="text-gray-400 text-sm mb-4">
                     Contact our travel experts for any questions about this
                     tour.
                   </p>
                   <div className="flex items-center justify-between">
                     <a
                       href="tel:+1234567890"
-                      className="text-primary-600 font-medium hover:text-primary-800 transition-colors"
+                      className="text-secondary-400 font-medium hover:text-secondary-300 transition-colors"
                     >
                       +1 (234) 567-890
                     </a>
                     <a
                       href="mailto:info@example.com"
-                      className="text-primary-600 font-medium hover:text-primary-800 transition-colors"
+                      className="text-secondary-400 font-medium hover:text-secondary-300 transition-colors"
                     >
                       info@example.com
                     </a>
@@ -475,8 +471,8 @@ export default function TourDetailsPage({
 
               {/* Related Tours */}
               {relatedTours.length > 0 && (
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                  <h3 className="text-lg font-semibold text-primary-900 mb-4">
+                <div className="bg-slate-900 rounded-xl shadow-sm p-6 border border-slate-800">
+                  <h3 className="text-lg font-semibold text-gray-100 mb-4">
                     Similar Tours
                   </h3>
                   <div className="space-y-4">
@@ -487,7 +483,7 @@ export default function TourDetailsPage({
                         className="block group"
                       >
                         <div className="flex gap-3">
-                          <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                          <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0 border border-slate-800">
                             <Image
                               src={relatedTour.coverImage.url}
                               alt={relatedTour.title}
@@ -496,15 +492,18 @@ export default function TourDetailsPage({
                             />
                           </div>
                           <div>
-                            <h4 className="font-medium text-primary-900 group-hover:text-primary-700 transition-colors line-clamp-2">
+                            <h4 className="font-medium text-gray-100 group-hover:text-secondary-400 transition-colors line-clamp-2">
                               {relatedTour.title}
                             </h4>
                             <div className="flex items-center gap-4 mt-1">
-                              <span className="text-xs text-primary-600 flex items-center">
-                                <Clock size={12} className="mr-1" />
+                              <span className="text-xs text-gray-400 flex items-center">
+                                <Clock
+                                  size={12}
+                                  className="mr-1 text-secondary-400"
+                                />
                                 {relatedTour.duration} days
                               </span>
-                              <span className="text-xs text-primary-600 font-medium">
+                              <span className="text-xs text-gray-400 font-medium">
                                 ${relatedTour.price}
                               </span>
                             </div>

@@ -65,10 +65,10 @@ export default function ToursPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-primary-50 to-white">
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
         {/* Hero Section */}
-        <div className="relative h-80 bg-primary-600">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 opacity-90"></div>
+        <div className="relative h-80 bg-slate-800">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 opacity-90"></div>
           <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Explore Our Tours
@@ -82,7 +82,7 @@ export default function ToursPage() {
 
         {/* Filters and Search */}
         <div className="container mx-auto px-4 py-8">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <div className="bg-slate-900 rounded-lg shadow-md p-6 mb-8 border border-slate-800">
             <div className="flex flex-col md:flex-row gap-4">
               {/* Search */}
               <div className="flex-1 relative">
@@ -92,7 +92,7 @@ export default function ToursPage() {
                 <input
                   type="text"
                   placeholder="Search tours..."
-                  className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -101,7 +101,7 @@ export default function ToursPage() {
               {/* Location Filter */}
               <div className="w-full md:w-64">
                 <select
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full p-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                   value={locationFilter}
                   onChange={(e) => setLocationFilter(e.target.value)}
                 >
@@ -117,7 +117,7 @@ export default function ToursPage() {
               {/* Price Sort */}
               <div className="w-full md:w-64">
                 <select
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full p-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                   value={priceSort}
                   onChange={(e) => setPriceSort(e.target.value)}
                 >
@@ -136,11 +136,11 @@ export default function ToursPage() {
             </div>
           ) : error ? (
             <div className="text-center py-20">
-              <p className="text-red-500 text-xl">{error}</p>
+              <p className="text-red-400 text-xl">{error}</p>
             </div>
           ) : filteredTours.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-xl">
+              <p className="text-gray-400 text-xl">
                 No tours found matching your criteria.
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function ToursPage() {
               {filteredTours.map((tour: any) => (
                 <div
                   key={tour._id}
-                  className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-primary-100"
+                  className="bg-slate-900 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-slate-800"
                 >
                   <div className="relative h-60">
                     <Image
@@ -165,22 +165,22 @@ export default function ToursPage() {
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-primary-900">
+                    <h3 className="text-xl font-bold mb-2 text-gray-100">
                       {tour.title}
                     </h3>
-                    <p className="text-primary-600 mb-4 line-clamp-3">
+                    <p className="text-gray-400 mb-4 line-clamp-3">
                       {tour.description}
                     </p>
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-primary-600">
+                      <div className="flex items-center text-gray-400">
                         <Clock size={18} className="mr-2 text-secondary-500" />
                         <span>{tour.duration} days</span>
                       </div>
-                      <div className="flex items-center text-primary-600">
+                      <div className="flex items-center text-gray-400">
                         <MapPin size={18} className="mr-2 text-secondary-500" />
                         <span>{tour.location}</span>
                       </div>
-                      <div className="flex items-center text-primary-600">
+                      <div className="flex items-center text-gray-400">
                         <DollarSign
                           size={18}
                           className="mr-2 text-secondary-500"

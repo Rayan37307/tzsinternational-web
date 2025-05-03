@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -22,7 +23,7 @@ module.exports = {
           900: '#312e81',
           950: '#1e1b4b',
         },
-        
+
         // Secondary colors - Teal
         'secondary': {
           50: '#f0fdfa',
@@ -37,7 +38,7 @@ module.exports = {
           900: '#134e4a',
           950: '#042f2e',
         },
-        
+
         // Accent colors - Amber
         'accent': {
           50: '#fffbeb',

@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-800 text-white pt-16 pb-8">
+    <footer className="bg-slate-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -18,32 +18,32 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-primary-200 mb-6">
+            <p className="text-gray-400 mb-6">
               Your trusted partner for international travel and education,
               creating unforgettable experiences since 2010.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-primary-700 flex items-center justify-center text-secondary-400 hover:bg-primary-600 transition-colors"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
               >
                 <span className="text-xs font-bold">FB</span>
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-primary-700 flex items-center justify-center text-secondary-400 hover:bg-primary-600 transition-colors"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
               >
                 <span className="text-xs font-bold">TW</span>
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-primary-700 flex items-center justify-center text-secondary-400 hover:bg-primary-600 transition-colors"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
               >
                 <span className="text-xs font-bold">IG</span>
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-primary-700 flex items-center justify-center text-secondary-400 hover:bg-primary-600 transition-colors"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 hover:bg-slate-700 transition-colors"
               >
                 <span className="text-xs font-bold">LI</span>
               </a>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-primary-200 hover:text-secondary-300 transition-colors flex items-center"
+                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
                 >
                   <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                   Home
@@ -68,7 +68,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/tours"
-                  className="text-primary-200 hover:text-secondary-300 transition-colors flex items-center"
+                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
                 >
                   <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                   Tours
@@ -77,7 +77,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-primary-200 hover:text-secondary-300 transition-colors flex items-center"
+                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
                 >
                   <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                   Blog
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#about"
-                  className="text-primary-200 hover:text-secondary-300 transition-colors flex items-center"
+                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
                 >
                   <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                   About Us
@@ -95,7 +95,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#contact"
-                  className="text-primary-200 hover:text-secondary-300 transition-colors flex items-center"
+                  className="text-gray-400 hover:text-secondary-300 transition-colors flex items-center"
                 >
                   <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                   Contact
@@ -115,7 +115,7 @@ export default function Footer() {
                   className="text-secondary-500 mr-3 mt-1 flex-shrink-0"
                   size={18}
                 />
-                <span className="text-primary-200">
+                <span className="text-gray-400">
                   123 Main Street, City, Country
                 </span>
               </li>
@@ -124,16 +124,14 @@ export default function Footer() {
                   className="text-secondary-500 mr-3 flex-shrink-0"
                   size={18}
                 />
-                <span className="text-primary-200">+1 234 567 890</span>
+                <span className="text-gray-400">+1 234 567 890</span>
               </li>
               <li className="flex items-center">
                 <Mail
                   className="text-secondary-500 mr-3 flex-shrink-0"
                   size={18}
                 />
-                <span className="text-primary-200">
-                  info@tzsinternational.com
-                </span>
+                <span className="text-gray-400">info@tzsinternational.com</span>
               </li>
             </ul>
           </div>
@@ -143,14 +141,14 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-5 text-white">
               Newsletter
             </h4>
-            <p className="text-primary-200 mb-4">
+            <p className="text-gray-400 mb-4">
               Subscribe to our newsletter to receive updates and travel tips.
             </p>
             <form className="flex">
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-4 py-2 bg-primary-700 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-secondary-500 w-full border border-primary-600"
+                className="px-4 py-2 bg-slate-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-secondary-500 w-full border border-slate-700"
               />
               <button
                 type="submit"
@@ -163,7 +161,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-700 mt-12 pt-8 text-center text-sm text-primary-300">
+        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} Tzsinternational. All rights
             reserved.

@@ -65,7 +65,7 @@ export default function BlogDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-secondary-500"></div>
         </div>
         <Footer />
@@ -77,16 +77,16 @@ export default function BlogDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
-            <div className="text-red-500 text-5xl mb-4">⚠️</div>
-            <h2 className="text-2xl font-bold text-primary-900 mb-2">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
+          <div className="bg-slate-900 p-8 rounded-lg shadow-md max-w-md w-full text-center border border-slate-800">
+            <div className="text-red-400 text-5xl mb-4">⚠️</div>
+            <h2 className="text-2xl font-bold text-gray-100 mb-2">
               Error Loading Blog
             </h2>
-            <p className="text-primary-600 mb-6">{error}</p>
+            <p className="text-gray-400 mb-6">{error}</p>
             <button
               onClick={() => router.back()}
-              className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+              className="px-4 py-2 bg-secondary-600 text-white rounded-md hover:bg-secondary-700 transition-colors"
             >
               Go Back
             </button>
@@ -101,19 +101,19 @@ export default function BlogDetailsPage({
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
+        <div className="min-h-screen flex items-center justify-center bg-slate-950">
+          <div className="bg-slate-900 p-8 rounded-lg shadow-md max-w-md w-full text-center border border-slate-800">
             <div className="text-yellow-500 text-5xl mb-4">🔍</div>
-            <h2 className="text-2xl font-bold text-primary-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-100 mb-2">
               Blog Not Found
             </h2>
-            <p className="text-primary-600 mb-6">
+            <p className="text-gray-400 mb-6">
               The blog post you're looking for doesn't exist or has been
               removed.
             </p>
             <Link
               href="/blog"
-              className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+              className="px-4 py-2 bg-secondary-600 text-white rounded-md hover:bg-secondary-700 transition-colors"
             >
               Browse All Blogs
             </Link>
@@ -127,7 +127,7 @@ export default function BlogDetailsPage({
   return (
     <>
       <Navbar />
-      <main className="bg-gray-50 pt-24 pb-16">
+      <main className="bg-slate-950 pt-24 pb-16">
         {/* Hero Section */}
         <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] mb-8">
           <div className="absolute inset-0">
@@ -174,14 +174,14 @@ export default function BlogDetailsPage({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
+              <div className="bg-slate-900 rounded-xl shadow-sm p-6 md:p-8 border border-slate-800">
                 {/* Tags */}
                 {blog.tags && blog.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-6">
                     {blog.tags.map((tag: string) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800"
+                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-gray-300"
                       >
                         <Tag size={12} className="mr-1" />
                         {tag}
@@ -191,18 +191,18 @@ export default function BlogDetailsPage({
                 )}
 
                 {/* Content */}
-                <div className="prose prose-lg max-w-none text-primary-800">
+                <div className="prose prose-lg max-w-none text-gray-300 prose-headings:text-gray-100 prose-strong:text-gray-200 prose-a:text-secondary-400">
                   <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                 </div>
 
                 {/* Share */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="mt-8 pt-6 border-t border-slate-800">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-primary-900">
+                    <h3 className="text-lg font-semibold text-gray-100">
                       Share this post
                     </h3>
                     <div className="flex gap-2">
-                      <button className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors">
+                      <button className="p-2 rounded-full bg-slate-800 text-secondary-400 hover:bg-slate-700 transition-colors">
                         <Share2 size={18} />
                       </button>
                     </div>
@@ -214,19 +214,19 @@ export default function BlogDetailsPage({
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Author */}
-              <div className="bg-white rounded-xl shadow-sm p-6">
-                <h3 className="text-lg font-semibold text-primary-900 mb-4">
+              <div className="bg-slate-900 rounded-xl shadow-sm p-6 border border-slate-800">
+                <h3 className="text-lg font-semibold text-gray-100 mb-4">
                   About the Author
                 </h3>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
+                  <div className="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400">
                     <User size={24} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-primary-900">
+                    <h4 className="font-medium text-gray-100">
                       {blog.author || "Admin"}
                     </h4>
-                    <p className="text-primary-600 text-sm">
+                    <p className="text-gray-400 text-sm">
                       Travel Writer & Blogger
                     </p>
                   </div>
@@ -235,8 +235,8 @@ export default function BlogDetailsPage({
 
               {/* Related Posts */}
               {relatedPosts.length > 0 && (
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                  <h3 className="text-lg font-semibold text-primary-900 mb-4">
+                <div className="bg-slate-900 rounded-xl shadow-sm p-6 border border-slate-800">
+                  <h3 className="text-lg font-semibold text-gray-100 mb-4">
                     Related Posts
                   </h3>
                   <div className="space-y-4">
@@ -247,7 +247,7 @@ export default function BlogDetailsPage({
                         className="block group"
                       >
                         <div className="flex gap-3">
-                          <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                          <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0 border border-slate-800">
                             <Image
                               src={post.coverImage.url}
                               alt={post.title}
@@ -256,10 +256,10 @@ export default function BlogDetailsPage({
                             />
                           </div>
                           <div>
-                            <h4 className="font-medium text-primary-900 group-hover:text-primary-700 transition-colors line-clamp-2">
+                            <h4 className="font-medium text-gray-100 group-hover:text-secondary-400 transition-colors line-clamp-2">
                               {post.title}
                             </h4>
-                            <p className="text-xs text-primary-500 mt-1">
+                            <p className="text-xs text-gray-400 mt-1">
                               {formatDate(post.createdAt)}
                             </p>
                           </div>

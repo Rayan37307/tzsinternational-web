@@ -66,10 +66,10 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-primary-50 to-white">
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
         {/* Hero Section */}
-        <div className="relative h-80 bg-primary-600">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 opacity-90"></div>
+        <div className="relative h-80 bg-slate-800">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 opacity-90"></div>
           <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Our Blog
@@ -83,7 +83,7 @@ export default function BlogPage() {
 
         {/* Search and Filters */}
         <div className="container mx-auto px-4 py-8">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8 border border-primary-100">
+          <div className="bg-slate-900 rounded-lg shadow-md p-6 mb-8 border border-slate-800">
             <div className="flex flex-col md:flex-row gap-4">
               {/* Search */}
               <div className="flex-1 relative">
@@ -93,7 +93,7 @@ export default function BlogPage() {
                 <input
                   type="text"
                   placeholder="Search blog posts..."
-                  className="w-full pl-10 pr-4 py-2 border border-primary-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
+                  className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -102,7 +102,7 @@ export default function BlogPage() {
               {/* Tag Filter */}
               <div className="w-full md:w-64">
                 <select
-                  className="w-full p-2 border border-primary-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
+                  className="w-full p-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                   value={selectedTag}
                   onChange={(e) => setSelectedTag(e.target.value)}
                 >
@@ -125,7 +125,7 @@ export default function BlogPage() {
                 className={`px-3 py-1 rounded-full text-sm ${
                   selectedTag === ""
                     ? "bg-secondary-500 text-white"
-                    : "bg-primary-100 text-primary-700 hover:bg-primary-200"
+                    : "bg-slate-800 text-gray-300 hover:bg-slate-700"
                 }`}
               >
                 All
@@ -137,7 +137,7 @@ export default function BlogPage() {
                   className={`px-3 py-1 rounded-full text-sm ${
                     selectedTag === tag
                       ? "bg-secondary-500 text-white"
-                      : "bg-primary-100 text-primary-700 hover:bg-primary-200"
+                      : "bg-slate-800 text-gray-300 hover:bg-slate-700"
                   }`}
                 >
                   {tag}
@@ -153,11 +153,11 @@ export default function BlogPage() {
             </div>
           ) : error ? (
             <div className="text-center py-20">
-              <p className="text-red-500 text-xl">{error}</p>
+              <p className="text-red-400 text-xl">{error}</p>
             </div>
           ) : filteredBlogs.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-xl">
+              <p className="text-gray-400 text-xl">
                 No blog posts found matching your criteria.
               </p>
             </div>
@@ -166,7 +166,7 @@ export default function BlogPage() {
               {filteredBlogs.map((blog: any) => (
                 <div
                   key={blog._id}
-                  className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-primary-100"
+                  className="bg-slate-900 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-slate-800"
                 >
                   <div className="relative h-48">
                     <Image
@@ -177,14 +177,14 @@ export default function BlogPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center text-primary-600 text-sm mb-2">
+                    <div className="flex items-center text-gray-400 text-sm mb-2">
                       <Calendar size={14} className="mr-1 text-secondary-500" />
                       <span>{formatDate(blog.createdAt)}</span>
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-primary-900">
+                    <h3 className="text-xl font-bold mb-2 text-gray-100">
                       {blog.title}
                     </h3>
-                    <p className="text-primary-600 mb-4 line-clamp-3">
+                    <p className="text-gray-400 mb-4 line-clamp-3">
                       {blog.content}
                     </p>
 
@@ -194,7 +194,7 @@ export default function BlogPage() {
                         {blog.tags.map((tag: string) => (
                           <span
                             key={tag}
-                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800"
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-gray-300"
                           >
                             {tag}
                           </span>
@@ -204,7 +204,7 @@ export default function BlogPage() {
 
                     <Link
                       href={`/blog/${blog._id}`}
-                      className="text-secondary-600 hover:text-secondary-700 font-medium inline-flex items-center"
+                      className="text-secondary-500 hover:text-secondary-400 font-medium inline-flex items-center"
                     >
                       Read More
                       <svg

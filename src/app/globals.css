@@ -1,48 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
-:root {
-  /* Primary colors - Indigo */
-  --primary-50: #eef2ff;
-  --primary-100: #e0e7ff;
-  --primary-200: #c7d2fe;
-  --primary-300: #a5b4fc;
-  --primary-400: #818cf8;
-  --primary-500: #6366f1;
-  --primary-600: #4f46e5;
-  --primary-700: #4338ca;
-  --primary-800: #3730a3;
-  --primary-900: #312e81;
-  --primary-950: #1e1b4b;
-
-  /* Secondary colors - Teal */
-  --secondary-50: #f0fdfa;
-  --secondary-100: #ccfbf1;
-  --secondary-200: #99f6e4;
-  --secondary-300: #5eead4;
-  --secondary-400: #2dd4bf;
-  --secondary-500: #14b8a6;
-  --secondary-600: #0d9488;
-  --secondary-700: #0f766e;
-  --secondary-800: #115e59;
-  --secondary-900: #134e4a;
-  --secondary-950: #042f2e;
-
-  /* Accent colors - Amber */
-  --accent-50: #fffbeb;
-  --accent-100: #fef3c7;
-  --accent-200: #fde68a;
-  --accent-300: #fcd34d;
-  --accent-400: #fbbf24;
-  --accent-500: #f59e0b;
-  --accent-600: #d97706;
-  --accent-700: #b45309;
-  --accent-800: #92400e;
-  --accent-900: #78350f;
-  --accent-950: #451a03;
-
-  /* Smooth scrolling */
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  /* Primary colors - Indigo (Dark mode version) */
+  --primary-50: #1e1b4b;
+  --primary-100: #312e81;
+  --primary-200: #3730a3;
+  --primary-300: #4338ca;
+  --primary-400: #4f46e5;
+  --primary-500: #6366f1;
+  --primary-600: #818cf8;
+  --primary-700: #a5b4fc;
+  --primary-800: #c7d2fe;
+  --primary-900: #e0e7ff;
+  --primary-950: #eef2ff;
+
+  /* Secondary colors - Teal (Dark mode version) */
+  --secondary-50: #042f2e;
+  --secondary-100: #134e4a;
+  --secondary-200: #115e59;
+  --secondary-300: #0f766e;
+  --secondary-400: #0d9488;
+  --secondary-500: #14b8a6;
+  --secondary-600: #2dd4bf;
+  --secondary-700: #5eead4;
+  --secondary-800: #99f6e4;
+  --secondary-900: #ccfbf1;
+  --secondary-950: #f0fdfa;
+
+  /* Accent colors - Amber (Dark mode version) */
+  --accent-50: #451a03;
+  --accent-100: #78350f;
+  --accent-200: #92400e;
+  --accent-300: #b45309;
+  --accent-400: #d97706;
+  --accent-500: #f59e0b;
+  --accent-600: #fbbf24;
+  --accent-700: #fcd34d;
+  --accent-800: #fde68a;
+  --accent-900: #fef3c7;
+  --accent-950: #fffbeb;
+
+  /* Background and text colors - Dark mode */
+  --bg-main: #0f172a; /* slate-950 */
+  --bg-card: #1e293b; /* slate-800 */
+  --bg-muted: #1e293b; /* slate-800 */
+  --bg-input: #0f172a; /* slate-950 */
+  --bg-button: #1e293b; /* slate-800 */
+  --bg-hover: #334155; /* slate-700 */
+  --text-main: #f3f4f6; /* gray-100 */
+  --text-muted: #9ca3af; /* gray-400 */
+  --text-bright: #ffffff; /* white */
+  --text-dim: #64748b; /* slate-500 */
+  --border-color: #334155; /* slate-700 */
+  --border-light: #475569; /* slate-600 */
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --gradient-start: #0f172a; /* slate-950 */
+  --gradient-end: #1e293b; /* slate-800 */
+  --gradient-middle: #0f172a; /* slate-950 */
+
+  /* Smooth scrolling is handled at the html level */
 }
 
 * {
@@ -51,8 +76,9 @@
 
 /* Base styles */
 body {
-  background-color: white;
-  color: #111827; /* gray-900 */
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom utility classes for our color palette */
