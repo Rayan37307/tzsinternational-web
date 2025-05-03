@@ -4,10 +4,10 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   await connectDB();
-  const { id } = await params;
+  const { id } = params;
   const blog = await Post.findById(id);
 
   if (!blog) {

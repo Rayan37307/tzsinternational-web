@@ -19,9 +19,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-
-export default function TourDetailsPage({ params }: { params: Params }) {
+export default function TourDetailsPage({ params }: NextPage.Props) {
   const router = useRouter();
   const [tour, setTour] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);

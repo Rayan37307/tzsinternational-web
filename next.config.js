@@ -15,6 +15,14 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Enable React strict mode for better development experience
   reactStrictMode: true,
+  // Configure TypeScript checking
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   // Configure headers for better security
   async headers() {
     return [

@@ -9,9 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-
-export default function BlogDetailsPage({ params }: { params: Params }) {
+export default function BlogDetailsPage({ params }: NextPage.Props) {
   const router = useRouter();
   const [blog, setBlog] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
