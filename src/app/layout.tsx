@@ -10,8 +10,39 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Tzsinternational",
-  description: "The next way for your journey",
+  title: "TZS International - Travel and Tour Services",
+  description:
+    "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
+  keywords:
+    "travel, tours, vacation, holiday packages, international travel, adventure tours",
+  authors: [{ name: "TZS International" }],
+  creator: "TZS International",
+  publisher: "TZS International",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com"
+  ),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "TZS International - Travel and Tour Services",
+    description:
+      "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com",
+    siteName: "TZS International",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TZS International - Travel and Tour Services",
+    description:
+      "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +52,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0f172a" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+      </head>
       <body className={`${poppins.variable} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

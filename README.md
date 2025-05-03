@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TZS International - Travel Website
+
+A modern travel website built with Next.js, featuring tours, blogs, and a dark mode theme.
+
+## Features
+
+- **Dark Mode Design**: Sleek dark-themed UI throughout the website
+- **Tour Packages**: Browse and view detailed tour information
+- **Blog Section**: Read travel tips and stories
+- **Responsive Design**: Works on all devices from mobile to desktop
+- **Smooth Animations**: Enhanced user experience with subtle animations
+- **API Integration**: Backend API for tours and blog content
+- **Cloudinary Integration**: Image storage and optimization
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: GSAP
+- **Database**: MongoDB with Mongoose
+- **Image Storage**: Cloudinary
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18.17.0 or later
+- MongoDB database
+- Cloudinary account
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/tzsinter-website.git
+   cd tzsinter-website
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Fill in your MongoDB and Cloudinary credentials
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment on Vercel
 
-## Deploy on Vercel
+### Automatic Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to GitHub
+2. Connect your GitHub repository to Vercel
+3. Configure the environment variables in Vercel dashboard
+4. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Manual Deployment
+
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy:
+   ```bash
+   vercel
+   ```
+
+## Environment Variables
+
+Make sure to set these environment variables in your Vercel project:
+
+- `MONGODB_URI`: Your MongoDB connection string
+- `CLOUDINARY_CLOUD_NAME`: Your Cloudinary cloud name
+- `CLOUDINARY_API_KEY`: Your Cloudinary API key
+- `CLOUDINARY_API_SECRET`: Your Cloudinary API secret
+- `NEXT_PUBLIC_SITE_URL`: Your production URL
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
