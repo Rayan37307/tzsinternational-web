@@ -142,9 +142,7 @@ export default function Navbar() {
     <header
       ref={navbarRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-teal-800 dark:bg-gray-900 backdrop-blur-sm shadow-lg"
-          : "bg-teal-800 dark:bg-gray-900"
+        scrolled ? "bg-gray-900 backdrop-blur-sm shadow-lg" : "bg-gray-900"
       }`}
     >
       {" "}
@@ -263,10 +261,10 @@ export default function Navbar() {
           isMenuOpen
             ? "max-h-screen opacity-100 visible"
             : "max-h-0 opacity-0 invisible"
-        } overflow-hidden bg-primary-800 dark:bg-gray-900`}
+        } overflow-hidden bg-gray-900`}
       >
         {" "}
-        <div className="px-4 pt-2 pb-4 space-y-1 border-t border-primary-700 dark:border-gray-700">
+        <div className="px-4 pt-2 pb-4 space-y-1 border-t border-gray-700">
           {" "}
           {menuItems.map((item) =>
             isHashLink(item.href) ? (
@@ -282,8 +280,8 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
                   isActive(item.href)
-                    ? "text-secondary-300 bg-primary-900 dark:bg-gray-800"
-                    : "text-gray-100 hover:text-white hover:bg-primary-900 dark:hover:bg-gray-800"
+                    ? "text-secondary-300 bg-gray-800"
+                    : "text-gray-100 hover:text-white hover:bg-gray-800"
                 }`}
               >
                 {" "}
@@ -296,8 +294,8 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive(item.href)
-                    ? "text-secondary-300 bg-primary-900 dark:bg-gray-800"
-                    : "text-gray-100 hover:text-white hover:bg-primary-900 dark:hover:bg-gray-800"
+                    ? "text-secondary-300 bg-gray-800"
+                    : "text-gray-100 hover:text-white hover:bg-gray-800"
                 }`}
               >
                 {" "}
