@@ -49,41 +49,46 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-5 text-white">Our Services</h4>
             <div className="grid grid-cols-1 gap-4">
               <div>
-                <h5 className="text-secondary-400 font-medium mb-2">Travel Agency</h5>
                 <ul className="space-y-2 text-gray-400">
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                     Air Ticketing
                   </li>
-                  <li className="flex items-center">
+                                    <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                    Medical Tourism
+                    Manpower
                   </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-secondary-400 font-medium mb-2">Recruiting</h5>
-                <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-center">
+                                    <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Recruitment
+                  </li>
+                                    <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                     Work Visa
                   </li>
+                                    <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Visa Processing
+                  </li>
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                    Manpower Recruitment
+                    Tourist Visa
                   </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-secondary-400 font-medium mb-2">Study Abroad</h5>
-                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Tour Packages
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Medical Services
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
+                    Study Abroad
+                  </li>
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
                     Hajj & Umrah
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-2"></span>
-                    Visa Processing
                   </li>
                 </ul>
               </div>

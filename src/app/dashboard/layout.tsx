@@ -27,18 +27,16 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
       <div className="lg:pl-64 min-h-screen">
         {/* Header */}
-        <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-10">
+        <header className="bg-gray-800 shadow-sm sticky top-0 z-10">
           <div className="flex items-center justify-between p-4">
-            <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
-              {sectionTitle}
-            </h1>
+            <h1 className="text-xl font-semibold text-white">{sectionTitle}</h1>
 
             <div className="flex items-center gap-4">
               {/* Search */}
@@ -49,12 +47,12 @@ export default function DashboardLayout({
                 <input
                   type="search"
                   placeholder="Search..."
-                  className="pl-10 pr-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+                  className="pl-10 pr-4 py-2 bg-gray-700 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
                 />
               </div>
 
               {/* Notifications */}
-              <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 relative">
+              <button className="p-2 rounded-full hover:bg-gray-700 relative">
                 <Bell size={20} />
                 <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
               </button>
@@ -82,9 +80,7 @@ export default function DashboardLayout({
                   {pathname.startsWith("/dashboard/tours") && (
                     <li>
                       {pathname === "/dashboard/tours" ? (
-                        <span className="text-gray-700 dark:text-gray-300">
-                          Tour Packages
-                        </span>
+                        <span className="text-gray-300">Tour Packages</span>
                       ) : (
                         <>
                           <a
@@ -98,7 +94,7 @@ export default function DashboardLayout({
                             <>
                               <li className="text-gray-500">/</li>
                               <li>
-                                <span className="text-gray-700 dark:text-gray-300">
+                                <span className="text-gray-300">
                                   {pathname.includes("/new")
                                     ? "New Tour"
                                     : "Edit Tour"}
@@ -114,7 +110,7 @@ export default function DashboardLayout({
                   {(pathname.startsWith("/dashboard/edit/") ||
                     pathname === "/dashboard/new") && (
                     <li>
-                      <span className="text-gray-700 dark:text-gray-300">
+                      <span className="text-gray-300">
                         {pathname === "/dashboard/new"
                           ? "New Post"
                           : "Edit Post"}
@@ -124,9 +120,7 @@ export default function DashboardLayout({
 
                   {pathname.startsWith("/dashboard/settings") && (
                     <li>
-                      <span className="text-gray-700 dark:text-gray-300">
-                        Settings
-                      </span>
+                      <span className="text-gray-300">Settings</span>
                     </li>
                   )}
                 </>
