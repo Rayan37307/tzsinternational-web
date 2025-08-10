@@ -31,7 +31,7 @@ export default function Hero() {
           {/* Hero content */}
           <div className="w-full  text-center pt-10 pb-16 lg:py-6">
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="inline-block px-3 py-1 bg-secondary-500/20 rounded-full text-secondary-200 text-sm font-medium mb-6 backdrop-blur-sm">
+              <div className="inline-block px-3 py-1 bg-slate-800 rounded-full text-sm font-lg mb-6 backdrop-blur-sm">
                 Discover the world with us
               </div>
             </ScrollReveal>
@@ -42,7 +42,7 @@ export default function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
               Your Journey{" "}
-              <span className="text-secondary-300">Starts Here</span>
+              <span className="">Starts Here</span>
             </AnimatedText>
 
             <ScrollReveal direction="up" delay={0.4}>
