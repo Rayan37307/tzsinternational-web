@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Send, Globe } from "lucide-react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Tiktok } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -30,13 +30,13 @@ export default function Footer() {
 {/*               <Link href="#"
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
                 <Twitter size={16} />
-              </Link>
-              <Link href="#"
+              </Link> */}
+              <Link href="https://www.instagram.com/tzsinternational?igsh=MThpMm5nNDE2OW0wbw=="
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
                 <Instagram size={16} />
               </Link>
-              <Link href="#"
+{/*               <Link href="#"
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
                 <Linkedin size={16} />
