@@ -23,11 +23,11 @@ export default function Footer() {
               Your trusted partner for international travel, recruitment, and education services.
             </p>
             <div className="flex space-x-4">
-              <Link href="#"
+              <Link href="https://www.facebook.com/share/1AmhrWtTiq/"
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
                 <Facebook size={16} />
               </Link>
-              <Link href="#"
+{/*               <Link href="#"
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
                 <Twitter size={16} />
               </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
                 <Linkedin size={16} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
