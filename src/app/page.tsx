@@ -10,7 +10,7 @@ import Whatsapp from "@/components/whatsapp";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />

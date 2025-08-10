@@ -36,11 +36,11 @@ export default function Footer() {
               >
                 <Instagram size={16} />
               </Link>
-{/*               <Link href="#"
+              <Link href="https://www.tiktok.com/@tzs.international?_t=ZS-8yl18ruKZuh&_r=1"
                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
               >
-                <Linkedin size={16} />
-              </Link> */}
+                <Image  src="/tiktok.svg" alt="TZS International" width={16} height={16} />
+              </Link>
             </div>
           </div>
 
