@@ -142,43 +142,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold mb-5 text-white">
-              Connect With TZS International
-            </h4>
-            <p className="text-gray-400 mb-4">
-              Follow us for updates on travel opportunities, visa news, and special offers.
-            </p>
-            <div className="mb-4">
-              <span className="text-gray-400">Socials:</span>
-              <div className="flex mt-2 space-x-2">
-                <Link href="#" className="text-gray-400 hover:text-secondary-300"> 
-                  @tzs.international
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-secondary-300">
-                  @TZSInternational
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-secondary-300">
-                  @tzsinternational
-                </Link>
-              </div>
-            </div>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 bg-slate-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-secondary-500 w-full border border-slate-700"
-              />
-              <button
-                type="submit"
-                className="bg-secondary-600 hover:bg-secondary-700 text-white px-3 py-2 rounded-r-md transition-colors"
-              >
-                <Send size={18} />
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Bottom Bar */}

@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="w-full  text-center pt-10 pb-16 lg:py-6">
             <ScrollReveal direction="up" delay={0.2}>
               <div className="inline-block px-3 py-1 bg-slate-800 rounded-full text-sm font-lg mb-6 backdrop-blur-sm">
-                Discover the world with us
+                Discover the world with us.
               </div>
             </ScrollReveal>
 
