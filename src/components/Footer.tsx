@@ -9,40 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <div className="mb-4">
-              <Image
-                src="/logo.png"
-                alt="TZS International"
-                width={160}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </div>
-            <p className="text-gray-400 mb-6">
-              Your trusted partner for international travel, recruitment, and education services.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/share/1AmhrWtTiq/"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
-                <Facebook size={16} />
-              </Link>
-{/*               <Link href="#"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
-                <Twitter size={16} />
-              </Link> */}
-              <Link href="https://www.instagram.com/tzsinternational?igsh=MThpMm5nNDE2OW0wbw=="
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
-              >
-                <Instagram size={16} />
-              </Link>
-              <Link href="https://www.tiktok.com/@tzs.international?_t=ZS-8yl18ruKZuh&_r=1"
-                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
-              >
-                <Image  src="/tiktok.svg" alt="TZS International" width={16} height={16} />
-              </Link>
-            </div>
-          </div>
+
 
           {/* Our Services */}
           <div>
@@ -141,6 +108,40 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+                    <div>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="TZS International"
+                width={160}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </div>
+            <p className="text-gray-400 mb-6">
+              Your trusted partner for international travel, recruitment, and education services.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="https://www.facebook.com/share/1AmhrWtTiq/"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
+                <Facebook size={16} />
+              </Link>
+{/*               <Link href="#"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors">
+                <Twitter size={16} />
+              </Link> */}
+              <Link href="https://www.instagram.com/tzsinternational?igsh=MThpMm5nNDE2OW0wbw=="
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
+              >
+                <Instagram size={16} />
+              </Link>
+              <Link href="https://www.tiktok.com/@tzs.international?_t=ZS-8yl18ruKZuh&_r=1"
+                className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-gray-300 hover:bg-slate-700 transition-colors"
+              >
+                <Image  src="/tiktok.svg" alt="TZS International" width={16} height={16} />
+              </Link>
+            </div>
           </div>
         </div>
 
