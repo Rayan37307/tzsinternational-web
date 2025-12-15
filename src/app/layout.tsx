@@ -10,14 +10,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
+  title: "Tzs International (RL-040) - Connecting People with Possibilities",
   description:
     "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. Expertise in bulk recruitment, skill development, and foreign language training.",
   keywords:
     "recruitment, manpower, international recruitment, overseas jobs, skill development, foreign language training, staffing solutions, global employment",
-  authors: [{ name: "Greenland Overseas" }],
-  creator: "Greenland Overseas",
-  publisher: "Greenland Overseas",
+  authors: [{ name: "Tzs International" }],
+  creator: "Tzs International",
+  publisher: "Tzs International",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com"
   ),
@@ -25,17 +25,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
+    title: "Tzs International (RL-040) - Connecting People with Possibilities",
     description:
       "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com",
-    siteName: "Greenland Overseas",
+    siteName: "Tzs International",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
+    title: "Tzs International (RL-040) - Connecting People with Possibilities",
     description:
       "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
   },
