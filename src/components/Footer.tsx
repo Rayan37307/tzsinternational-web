@@ -149,7 +149,7 @@ const Footer = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 1, type: "spring", stiffness: 200 }}
         >
-          <Link
+          {/* <Link
             href="https://wa.me/8801731883700"
             target="_blank"
             rel="noopener noreferrer"
@@ -157,7 +157,7 @@ const Footer = () => {
             aria-label="Chat with us on WhatsApp"
           >
             <Send className="h-6 w-6" />
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
     </footer>

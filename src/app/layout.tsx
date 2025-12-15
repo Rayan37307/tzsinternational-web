@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Whatsapp from "@/components/whatsapp";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
+        <Whatsapp />
       </body>
     </html>
   );
