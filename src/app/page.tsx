@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Users, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Users, Globe, Award, Clock, Star } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Typography } from '@/components/ui/Typography';
@@ -159,6 +159,78 @@ const Home = () => {
                     <Typography variant="p" className="text-text-secondary">
                       {feature.description}
                     </Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Partners Section */}
+      <section className="py-20 bg-bg-muted">
+        <div className="container mx-auto px-4">
+          <FadeIn>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <Typography variant="h2" className="mb-4">Our Trusted Partners</Typography>
+              <Typography variant="p" className="text-lg text-text-secondary">
+                Collaborating with industry leaders worldwide
+              </Typography>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+              <ScaleIn key={index} delay={index * 0.05}>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 bg-gray-200 border-2 border-dashed rounded-xl w-full flex items-center justify-center mx-auto">
+                    <span className="text-gray-500">Partner {index + 1}</span>
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">Partner Name</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Industry Sector</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Navigators Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <FadeIn>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <Typography variant="h2" className="mb-4">Meet Our Navigators</Typography>
+              <Typography variant="p" className="text-lg text-text-secondary">
+                Our expert team guiding you to success
+              </Typography>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3, 4, 5, 6].map((navigator, index) => (
+              <ScaleIn key={index} delay={index * 0.1}>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-64 bg-gray-200 border-2 border-dashed rounded-t-xl w-full" />
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Navigator Name</Typography>
+                    <Typography variant="p" className="text-text-secondary">Position Title</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      {`Expert navigator with ${Math.floor(Math.random() * 10) + 5}+ years of experience in international recruitment and manpower solutions.`}
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </ScaleIn>

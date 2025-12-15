@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Users, Globe, Building, Star, Award, CheckCircle } from 'lucide-react';
+import { Users, Globe, Building, Star, Award, CheckCircle, Clock, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Typography } from '@/components/ui/Typography';
