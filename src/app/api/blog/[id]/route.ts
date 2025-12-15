@@ -1,13 +1,14 @@
 import connectDB from "@/lib/dbConnect";
 import Post from "@/models/blog.model";
 import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   await connectDB();
-  const { id } = params;
+  const { id } = await params;
   const blog = await Post.findById(id);
 
   if (!blog) {
