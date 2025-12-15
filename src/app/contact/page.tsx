@@ -319,7 +319,7 @@ const Contact = () => {
                 For urgent matters, please contact our 24/7 support line directly.
               </Typography>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
+                <Button size="xl" className="bg-black text-primary-600 hover:bg-gray-100">
                   <Phone className="h-5 w-5 mr-2" />
                   Call Us Now
                 </Button>

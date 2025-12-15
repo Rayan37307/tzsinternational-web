@@ -407,7 +407,7 @@ const OurClients = () => {
                   Become part of our trusted client community and experience excellence in recruitment.
                 </Typography>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
+                  <Button size="xl" className="bg-black text-primary-600 hover:bg-gray-100">
                     Partner with Us
                   </Button>
                   <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">

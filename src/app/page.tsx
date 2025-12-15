@@ -488,35 +488,62 @@ const Home = () => {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clientTestimonials.map((client, index) => (
-              <ScaleIn key={index} delay={index * 0.1}>
-                <Card className="text-center group hover:shadow-xl transition-shadow p-6">
-                  <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary-100 group-hover:border-primary-300 transition-colors">
-                    <img
-                      src={client.picture.large}
-                      alt={`${client.name.first} ${client.name.last}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-0">
-                    <Typography variant="h5" className="mb-2">{client.name.first} {client.name.last}</Typography>
-                    <Typography variant="p" className="text-text-secondary text-sm mb-4">{client.location.city}, {client.location.country}</Typography>
-                    <div className="flex justify-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-current" />
-                        ))}
-                      </div>
+          {/* Auto-sliding testimonial carousel */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll gap-8">
+              {[...clientTestimonials, ...clientTestimonials].map((client, index) => (
+                <div
+                  key={`${index}-${client.name.first}`}
+                  className="flex-shrink-0 w-80"
+                >
+                  <Card className="text-center group hover:shadow-xl transition-shadow p-6 h-full">
+                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary-100 group-hover:border-primary-300 transition-colors">
+                      <img
+                        src={client.picture.large}
+                        alt={`${client.name.first} ${client.name.last}`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <Typography variant="p" className="text-text-secondary italic">
-                      "{client.testimonial}"
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </ScaleIn>
-            ))}
+                    <CardContent className="p-0">
+                      <Typography variant="h5" className="mb-2">{client.name.first} {client.name.last}</Typography>
+                      <Typography variant="p" className="text-text-secondary text-sm mb-4">{client.location.city}, {client.location.country}</Typography>
+                      <div className="flex justify-center mb-4">
+                        <div className="flex text-yellow-400">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-current" />
+                          ))}
+                        </div>
+                      </div>
+                      <Typography variant="p" className="text-text-secondary italic">
+                        "{client.testimonial}"
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
+
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            .animate-scroll {
+              display: inline-flex;
+              animation: scroll 30s linear infinite;
+              width: 200%; /* Double the width to create seamless loop */
+            }
+
+            .animate-scroll:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
         </div>
       </section>
 
