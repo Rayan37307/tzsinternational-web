@@ -19,20 +19,20 @@ export default function About() {
           className="text-3xl md:text-4xl font-bold mb-8 text-center text-text-main"
           type="words"
         >
-          About <span className="text-primary-600">Greenland Overseas</span>
+          About <span className="text-primary-600">TZS International</span>
         </AnimatedText>
 
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 md:pr-12">
             <ScrollReveal direction="left" delay={0.2}>
               <p className="text-text-secondary mb-6">
-              Greenland Overseas is a premier international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. With years of industry expertise, we provide comprehensive services for bulk recruitment, skill development, and foreign language training.
+              TZS International is a premier international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. With years of industry expertise, we provide comprehensive services for bulk recruitment, skill development, and foreign language training.
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={0.4}>
               <p className="text-text-secondary mb-6">
-              Our Dhaka-based team is dedicated to simplifying international employment journeys through personalized service and compliance-focused guidance. We take pride in connecting Bangladeshi talent with opportunities worldwide while maintaining the highest standards of integrity and professionalism. With RL-040 license, Greenland Overseas bridges aspirations with global possibilities.
+              Our Dhaka-based team is dedicated to simplifying international employment journeys through personalized service and compliance-focused guidance. We take pride in connecting Bangladeshi talent with opportunities worldwide while maintaining the highest standards of integrity and professionalism. With RL-040 license, TZS International bridges aspirations with global possibilities.
               </p>
             </ScrollReveal>
 
@@ -51,7 +51,7 @@ export default function About() {
               <AnimatedElement type="scaleIn">
                 <Image
                   src="/hero.jpg"
-                  alt="About Greenland Overseas"
+                  alt="About TZS International"
                   width={500}
                   height={500}
                   className="rounded-lg shadow-sleek border border-border-light"

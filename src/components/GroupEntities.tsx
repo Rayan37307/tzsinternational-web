@@ -38,7 +38,7 @@ const entities = [
     icon: Shield
   },
   {
-    name: "Greenland Overseas Tourism Ltd.",
+    name: "TZS International Tourism Ltd.",
     description: "Tourism and travel services",
     icon: Plane
   },

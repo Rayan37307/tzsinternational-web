@@ -46,7 +46,7 @@ const Appreciation = () => {
     {
       name: "Client Name",
       company: "Company Name",
-      content: "Greenland Overseas exceeded our expectations. Their professional approach and attention to detail were remarkable.",
+      content: "TZS International exceeded our expectations. Their professional approach and attention to detail were remarkable.",
       role: "HR Director"
     },
     {
@@ -58,7 +58,7 @@ const Appreciation = () => {
     {
       name: "Professional Name",
       company: "Industry Professional",
-      content: "My experience with Greenland Overseas was transformative. They opened doors to opportunities I never thought possible.",
+      content: "My experience with TZS International was transformative. They opened doors to opportunities I never thought possible.",
       role: "Industry Expert"
     }
   ];
@@ -68,7 +68,7 @@ const Appreciation = () => {
     {
       name: "Partner Company",
       logo: "/placeholder-logo.jpg",
-      content: "Greenland Overseas has been an invaluable partner, consistently delivering quality candidates and exceptional service.",
+      content: "TZS International has been an invaluable partner, consistently delivering quality candidates and exceptional service.",
       date: "2023-05-15"
     },
     {
@@ -288,7 +288,7 @@ const Appreciation = () => {
             
             <div className="space-y-12 md:space-y-0">
               {[
-                { year: "2009", title: "Company Founded", desc: "Greenland Overseas established with a vision to connect talent globally" },
+                { year: "2009", title: "Company Founded", desc: "TZS International established with a vision to connect talent globally" },
                 { year: "2012", title: "International Expansion", desc: "Expanded operations to serve clients in multiple countries" },
                 { year: "2016", title: "Technology Integration", desc: "Launched digital platforms for efficient recruitment processes" },
                 { year: "2020", title: "Milestone Achievement", desc: "Achieved 5000 successful placements across 40+ countries" },

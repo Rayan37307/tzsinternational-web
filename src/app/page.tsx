@@ -12,6 +12,7 @@ import { ScaleIn } from '@/components/animation/ScaleIn';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 const Home = () => {
   // Features data
@@ -37,6 +38,155 @@ const Home = () => {
       description: "Streamlined solutions for faster and reliable placements."
     }
   ];
+
+  // Testimonials data
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      position: "Software Engineer",
+      company: "TechCorp Inc.",
+      content: "Thanks to this platform, I landed my dream job in Germany. The support throughout the process was exceptional!",
+      rating: 5,
+      avatar: "https://source.unsplash.com/100x100/?portrait,women"
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      position: "Marketing Director",
+      company: "Global Solutions Ltd.",
+      content: "The recruitment process was seamless and efficient. Highly recommend their services for international opportunities.",
+      rating: 5,
+      avatar: "https://source.unsplash.com/100x100/?portrait,men"
+    },
+    {
+      id: 3,
+      name: "Fatima Al-Zahra",
+      position: "Healthcare Specialist",
+      company: "MedCare International",
+      content: "Professional team that understands cultural nuances and provides excellent guidance for international transitions.",
+      rating: 5,
+      avatar: "https://source.unsplash.com/100x100/?portrait,professional"
+    }
+  ];
+
+  // Services data
+  const services = [
+    {
+      id: 1,
+      title: "International Recruitment",
+      description: "Connecting top talent with global opportunities across industries.",
+      icon: <Globe className="h-10 w-10 text-primary-600" />
+    },
+    {
+      id: 2,
+      title: "Visa Processing",
+      description: "Complete assistance with visa applications and documentation.",
+      icon: <Users className="h-10 w-10 text-secondary-600" />
+    },
+    {
+      id: 3,
+      title: "Relocation Support",
+      description: "End-to-end relocation services to help you settle in your new destination.",
+      icon: <Award className="h-10 w-10 text-accent-600" />
+    },
+    {
+      id: 4,
+      title: "Skill Development",
+      description: "Training programs to enhance skills for international markets.",
+      icon: <Star className="h-10 w-10 text-primary-600" />
+    }
+  ];
+
+  // Statistics data for countries served
+  const countryStats = [
+    { country: "United States", count: "500+", flag: "🇺🇸" },
+    { country: "Canada", count: "300+", flag: "🇨🇦" },
+    { country: "Australia", count: "400+", flag: "🇦🇺" },
+    { country: "Germany", count: "250+", flag: "🇩🇪" },
+    { country: "UAE", count: "600+", flag: "🇦🇪" },
+    { country: "Singapore", count: "200+", flag: "🇸🇬" }
+  ];
+
+  // Team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Ahmed Hassan",
+      position: "Senior Recruitment Specialist",
+      experience: "8+ years",
+      expertise: ["IT", "Engineering", "Finance"],
+      image: "https://source.unsplash.com/100x100/?portrait,man,business"
+    },
+    {
+      id: 2,
+      name: "Priya Sharma",
+      position: "HR Consultant",
+      experience: "6+ years",
+      expertise: ["Healthcare", "Education", "Hospitality"],
+      image: "https://source.unsplash.com/100x100/?portrait,woman,business"
+    },
+    {
+      id: 3,
+      name: "David Kim",
+      position: "Legal Advisor",
+      experience: "10+ years",
+      expertise: ["Immigration", "Compliance", "Documentation"],
+      image: "https://source.unsplash.com/100x100/?portrait,glasses,business"
+    },
+    {
+      id: 4,
+      name: "Maria Rodriguez",
+      position: "Cultural Liaison",
+      experience: "5+ years",
+      expertise: ["Cross-cultural", "Communication", "Integration"],
+      image: "https://source.unsplash.com/100x100/?portrait,smile,professional"
+    }
+  ];
+
+  const [clientTestimonials, setClientTestimonials] = React.useState([]);
+
+  // Function to fetch client testimonials using Random User API
+  const fetchClientTestimonials = async () => {
+    try {
+      // Fetch 6 client testimonials (for 3 columns on desktop)
+      const promises = Array.from({ length: 6 }).map(() =>
+        fetch('https://randomuser.me/api/')
+          .then(res => res.json())
+          .then(data => data.results[0])
+      );
+
+      const clients = await Promise.all(promises);
+
+      // Add random testimonials to each client
+      const testimonials = clients.map(client => ({
+        ...client,
+        testimonial: generateRandomTestimonial(),
+      }));
+
+      setClientTestimonials(testimonials);
+    } catch (error) {
+      console.error('Error fetching client testimonials:', error);
+    }
+  };
+
+  // Helper function to generate random testimonials
+  const generateRandomTestimonial = () => {
+    const testimonials = [
+      "Exceptional service! They helped me find the perfect opportunity in record time.",
+      "Professional, reliable, and truly care about their clients' success.",
+      "The best recruitment service I've ever used. Highly recommended!",
+      "Their attention to detail and follow-up service is outstanding.",
+      "Connected me with my dream job with minimal hassle. Great team!",
+      "Efficient process and excellent communication throughout the journey."
+    ];
+    return testimonials[Math.floor(Math.random() * testimonials.length)];
+  };
+
+  // Effect to load client testimonials when component mounts
+  React.useEffect(() => {
+    fetchClientTestimonials();
+  }, []);
 
   return (
     <div className="min-h-screen bg-bg-main text-text-main">
@@ -180,7 +330,7 @@ const Home = () => {
           </FadeIn>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+            {[1, 2, 3].map((item, index) => (
               <ScaleIn key={index} delay={index * 0.05}>
                 <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
                   <div className="h-24 bg-gray-200 border-2 border-dashed rounded-xl w-full flex items-center justify-center mx-auto">
@@ -210,15 +360,24 @@ const Home = () => {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((navigator, index) => (
-              <ScaleIn key={index} delay={index * 0.1}>
+              <ScaleIn>
                 <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
-                  <div className="h-64 bg-gray-200 border-2 border-dashed rounded-t-xl w-full" />
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/director.png"
+    alt="director"
+    fill
+    sizes="100vw"
+    className="object-cover objec"
+    priority
+  />
+</div>
+
                   <CardContent className="pt-6">
-                    <Typography variant="h4">Navigator Name</Typography>
-                    <Typography variant="p" className="text-text-secondary">Position Title</Typography>
+                    <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
+                    <Typography variant="p" className="text-text-secondary">Director</Typography>
                     <Typography variant="p" className="text-text-secondary mt-4">
-                      {`Expert navigator with ${Math.floor(Math.random() * 10) + 5}+ years of experience in international recruitment and manpower solutions.`}
+                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
                     </Typography>
                     <div className="flex justify-center mt-6 space-x-4">
                       <Button variant="ghost" size="icon">
@@ -231,6 +390,113 @@ const Home = () => {
                         <Award className="h-5 w-5" />
                       </Button>
                     </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/founder.png"
+    alt="founder"
+    fill
+    sizes="100vw"
+    className="object-cover object-[center_20%]"
+    priority
+  />
+</div>
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Muhammad Tariqul Islam</Typography>
+                    <Typography variant="p" className="text-text-secondary">Founder & CEO</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 12+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/managingdirector.png"
+    alt="founder"
+    fill
+    sizes="100vw"
+    className="object-cover obje"
+    priority
+  />
+</div>
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Shirin Akther</Typography>
+                    <Typography variant="p" className="text-text-secondary">Managing Director</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Appreciation Section */}
+      <section className="py-20 bg-bg-muted">
+        <div className="container mx-auto px-4">
+          <FadeIn>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <Typography variant="h2" className="mb-4">Client Appreciation</Typography>
+              <Typography variant="p" className="text-lg text-text-secondary">
+                What our valued clients say about our services
+              </Typography>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {clientTestimonials.map((client, index) => (
+              <ScaleIn key={index} delay={index * 0.1}>
+                <Card className="text-center group hover:shadow-xl transition-shadow p-6">
+                  <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary-100 group-hover:border-primary-300 transition-colors">
+                    <img
+                      src={client.picture.large}
+                      alt={`${client.name.first} ${client.name.last}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-0">
+                    <Typography variant="h5" className="mb-2">{client.name.first} {client.name.last}</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm mb-4">{client.location.city}, {client.location.country}</Typography>
+                    <div className="flex justify-center mb-4">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+                    <Typography variant="p" className="text-text-secondary italic">
+                      "{client.testimonial}"
+                    </Typography>
                   </CardContent>
                 </Card>
               </ScaleIn>
@@ -250,7 +516,7 @@ const Home = () => {
                   Join thousands of professionals who found their perfect match with our global network.
                 </Typography>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
+                  <Button size="xl" className="bg-black text-primary-600 hover:bg-gray-100">
                     Start Your Journey
                   </Button>
                   <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">

@@ -227,7 +227,7 @@ const Gallery = () => {
             
             <div className="space-y-12 md:space-y-0">
               {[
-                { year: "2009", title: "Company Founded", desc: "Greenland Overseas established with a vision to connect talent globally" },
+                { year: "2009", title: "Company Founded", desc: "TZS International established with a vision to connect talent globally" },
                 { year: "2012", title: "International Expansion", desc: "Expanded operations to serve clients in multiple countries" },
                 { year: "2016", title: "Technology Integration", desc: "Launched digital platforms for efficient recruitment processes" },
                 { year: "2020", title: "Milestone Achievement", desc: "Achieved 5000 successful placements across 40+ countries" },

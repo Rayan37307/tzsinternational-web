@@ -87,7 +87,7 @@ const RecuitmentPolicy = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <Typography variant="h2" className="mb-4">Our Commitment</Typography>
               <Typography variant="p" className="text-lg text-text-secondary">
-                Greenland Overseas is committed to maintaining the highest standards in international recruitment and manpower solutions.
+                TZS International is committed to maintaining the highest standards in international recruitment and manpower solutions.
               </Typography>
             </div>
           </SlideUp>

@@ -72,7 +72,7 @@ const WhyChoose = () => {
     {
       name: "Client Name",
       position: "HR Director, Company",
-      content: "Greenland Overseas exceeded our expectations. Their professional approach and attention to detail were remarkable.",
+      content: "TZS International exceeded our expectations. Their professional approach and attention to detail were remarkable.",
       company: "Large Healthcare Organization",
       rating: 5
     },
@@ -86,7 +86,7 @@ const WhyChoose = () => {
     {
       name: "Professional Name",
       position: "Industry Expert",
-      content: "My experience with Greenland Overseas was transformational. They opened doors to opportunities I never thought possible.",
+      content: "My experience with TZS International was transformational. They opened doors to opportunities I never thought possible.",
       company: "Professional in Field",
       rating: 5
     }

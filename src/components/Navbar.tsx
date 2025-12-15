@@ -26,8 +26,8 @@ const menuItems = [
       { name: 'Appreciation', href: '/appreciation' }
     ]
   },
-  { name: 'Licence', href: '/licence' },
-  { name: 'Document', href: '/document' },
+  // { name: 'Licence', href: '/licence' },
+  // { name: 'Document', href: '/document' },
   { name: 'Our Clients', href: '/our-clients' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Contact Us', href: '/contact' },
@@ -97,9 +97,9 @@ const Navbar = () => {
             <div className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="Greenland Overseas Logo"
-                width={160}
-                height={32}
+                alt="TZS International Logo"
+                width={190}
+                height={62}
                 className="h-8 w-auto transition-transform hover:scale-105"
               />
             </div>

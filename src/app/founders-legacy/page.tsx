@@ -18,7 +18,7 @@ const FoundersLegacy = () => {
     {
       year: "2009",
       title: "Company Foundation",
-      description: "Greenland Overseas was founded with a vision to connect talented professionals with global opportunities."
+      description: "TZS International was founded with a vision to connect talented professionals with global opportunities."
     },
     {
       year: "2012",

@@ -44,7 +44,7 @@ const OurClients = () => {
       id: 1,
       name: 'Ahmed Al-Kaabi',
       position: 'HR Director, Emirates Group',
-      content: 'Greenland Overseas has been our trusted partner for over 5 years. Their candidates are well-prepared and adapt quickly to our work environment.',
+      content: 'TZS International has been our trusted partner for over 5 years. Their candidates are well-prepared and adapt quickly to our work environment.',
       company: 'Emirates Group',
       country: 'UAE',
     },

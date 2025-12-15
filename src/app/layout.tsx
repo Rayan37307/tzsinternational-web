@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Tzs International (RL-040) - Connecting People with Possibilities",
+  title: "Tzs International - Connecting People with Possibilities",
   description:
     "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. Expertise in bulk recruitment, skill development, and foreign language training.",
   keywords:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   creator: "Tzs International",
   publisher: "Tzs International",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com"
   ),
   alternates: {
     canonical: "/",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Tzs International (RL-040) - Connecting People with Possibilities",
     description:
       "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com",
     siteName: "Tzs International",
     locale: "en_US",
     type: "website",

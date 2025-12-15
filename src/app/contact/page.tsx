@@ -44,7 +44,7 @@ const Contact = () => {
       id: 3,
       icon: <MailIcon className="h-6 w-6 text-accent-600" />,
       title: 'Email Address',
-      content: 'info@greenlandoverseas.com',
+      content: 'tzsinternationalbd@gmail.com',
       additional: 'General Inquiries'
     },
     {
@@ -138,12 +138,21 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Map Placeholder */}
+              {/* Google Map */}
               <SlideUp delay={0.3}>
                 <div className="mt-12">
                   <Typography variant="h3" className="mb-4">Find Us</Typography>
-                  <div className="bg-gray-200 border-2 border-dashed border-border-light rounded-2xl w-full h-64 flex items-center justify-center">
-                    <span className="text-gray-500">Interactive Map Location</span>
+                  <div className="rounded-2xl overflow-hidden shadow-lg border border-border-light">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.85484581448696!2d90.42647179757122!3d23.798055947038083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b77d72ab59%3A0xb495c120cf611030!2sSocial%20Islami%20Bank%20Limited!5e1!3m2!1sen!2sbd!4v1765789599683!5m2!1sen!2sbd"
+                      width="100%"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="TZS International Office Location"
+                    />
                   </div>
                 </div>
               </SlideUp>

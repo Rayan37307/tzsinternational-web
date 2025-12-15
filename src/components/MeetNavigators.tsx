@@ -33,7 +33,7 @@ const defaultProfiles = [
     imageSrc: '/mofizur-rahman.jpg',
     name: 'MOFIZUR RAHMAN',
     title: 'DIRECTOR',
-    bio: 'Mr. Mofizur Rahman, serving as Director (Recruitment) of Greenland Overseas, has been an integral part of the organization\'s success for over three decades. Known for his hands-on approach and strong managerial acumen.',
+    bio: 'Mr. Mofizur Rahman, serving as Director (Recruitment) of TZS International, has been an integral part of the organization\'s success for over three decades. Known for his hands-on approach and strong managerial acumen.',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function MeetNavigators({ profiles = defaultProfiles }: MeetNavig
         <div className="mt-16 text-center">
           <p className="text-gray-600 max-w-4xl mx-auto">
             Our leadership team combines international experience with deep understanding of local markets to deliver exceptional results.
-            Their combined expertise in business management, engineering, healthcare, and recruitment has positioned Greenland Overseas as
+            Their combined expertise in business management, engineering, healthcare, and recruitment has positioned TZS International as
             a trusted partner for organizations worldwide seeking quality human resources solutions.
           </p>
         </div>

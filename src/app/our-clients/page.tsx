@@ -11,6 +11,7 @@ import { ScaleIn } from '@/components/animation/ScaleIn';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 const OurClients = () => {
   // Client industries
@@ -37,44 +38,81 @@ const OurClients = () => {
 
   // Client logos
   const clientLogos = [
-    { name: "Company Name", industry: "Technology" },
-    { name: "Organization Name", industry: "Healthcare" },
-    { name: "Business Name", industry: "Manufacturing" },
-    { name: "Enterprise Name", industry: "Hospitality" },
-    { name: "Institution Name", industry: "Education" },
-    { name: "Corporation Name", industry: "Finance" },
-    { name: "Agency Name", industry: "Government" },
-    { name: "Group Name", industry: "Construction" },
-    { name: "Firm Name", industry: "Legal" },
-    { name: "Institute Name", industry: "Research" },
-    { name: "Foundation Name", industry: "Non-profit" },
-    { name: "Laboratory Name", industry: "Science" }
+    { name: "CL Digital", img: "/brand1.jpeg", industry: "Technology" },
+    { name: "Sidvo",img: "/brand2.jpg", industry: "Healthcare" },
+    { name: "One Tech",img: "/brand3.jpeg", industry: "Manufacturing" },
+    // { name: "Enterprise Name",img: "/brand1.jpeg", industry: "Hospitality" },
   ];
 
-  // Client testimonials
-  const testimonials = [
-    {
-      name: "Client Name",
-      position: "HR Director, Company",
-      content: "Greenland Overseas has been instrumental in helping us find top-tier talent. Their understanding of our industry needs is exceptional.",
-      company: "Large Healthcare Organization",
-      rating: 5
-    },
-    {
-      name: "Client Name",
-      position: "Operations Manager",
-      content: "The recruitment process was seamless and efficient. We found exactly the talent we needed in record time.",
-      company: "Manufacturing Company",
-      rating: 5
-    },
-    {
-      name: "Client Name",
-      position: "CEO",
-      content: "Their professionalism and attention to detail have made them our preferred recruitment partner for all international placements.",
-      company: "Construction Firm",
-      rating: 5
+  const [clientTestimonials, setClientTestimonials] = React.useState([]);
+
+  // Function to fetch dynamic client testimonials using Random User API
+  const fetchClientTestimonials = async () => {
+    try {
+      // Fetch 6 client testimonials
+      const promises = Array.from({ length: 6 }).map(() =>
+        fetch('https://randomuser.me/api/')
+          .then(res => res.json())
+          .then(data => data.results[0])
+      );
+
+      const clients = await Promise.all(promises);
+
+      // Add random testimonials to each client
+      const testimonials = clients.map((client, index) => ({
+        name: `${client.name.first} ${client.name.last}`,
+        position: generateRandomPosition(),
+        content: generateRandomTestimonial(),
+        company: generateRandomCompany(),
+        rating: 5,
+        avatar: client.picture.thumbnail
+      }));
+
+      setClientTestimonials(testimonials);
+    } catch (error) {
+      console.error('Error fetching client testimonials:', error);
     }
-  ];
+  };
+
+  // Helper function to generate random positions
+  const generateRandomPosition = () => {
+    const positions = [
+      "HR Director", "Operations Manager", "CEO", "CTO", "Director of Talent",
+      "Chief People Officer", "Recruitment Manager", "Business Development Manager",
+      "Talent Acquisition Lead", "VP of Human Resources"
+    ];
+    return positions[Math.floor(Math.random() * positions.length)];
+  };
+
+  // Helper function to generate random companies
+  const generateRandomCompany = () => {
+    const industries = [
+      "Tech Solutions Inc.", "Global Manufacturing", "Healthcare Systems",
+      "Hospitality Group", "Construction Leaders", "Education Network",
+      "Financial Services", "Energy Corp", "Logistics Solutions", "Agriculture Partners"
+    ];
+    return industries[Math.floor(Math.random() * industries.length)];
+  };
+
+  // Helper function to generate random testimonials
+  const generateRandomTestimonial = () => {
+    const testimonials = [
+      "Exceptional service! They helped us find the perfect talent in record time.",
+      "Professional, reliable, and truly care about our company's success.",
+      "The best recruitment service we've ever used. Highly recommended!",
+      "Their attention to detail and follow-up service is outstanding.",
+      "Connected us with top-tier candidates with minimal hassle. Great team!",
+      "Efficient process and excellent communication throughout the journey.",
+      "Outstanding service with results that exceeded our expectations.",
+      "Reliable partners who understand our industry needs perfectly."
+    ];
+    return testimonials[Math.floor(Math.random() * testimonials.length)];
+  };
+
+  // Effect to load client testimonials when component mounts
+  React.useEffect(() => {
+    fetchClientTestimonials();
+  }, []);
 
   return (
     <div className="min-h-screen bg-bg-main text-text-main">
@@ -220,8 +258,15 @@ const OurClients = () => {
             {clientLogos.map((client, index) => (
               <ScaleIn key={index} delay={index * 0.1}>
                 <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
-                  <div className="h-32 bg-gray-200 border-2 border-dashed rounded-t-xl w-full flex items-center justify-center">
-                    <span className="text-gray-500">Logo</span>
+                  <div className="relative h-32 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+                    <Image
+                      src={client.img}
+                      alt="director"
+                      fill
+                      sizes="100vw"
+                      className="object-cover objec"
+                      priority
+                    />
                   </div>
                   <CardContent className="p-4">
                     <Typography variant="h5" className="font-semibold">{client.name}</Typography>
@@ -245,9 +290,9 @@ const OurClients = () => {
               </Typography>
             </div>
           </SlideUp>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {clientTestimonials.map((testimonial, index) => (
               <ScaleIn key={index} delay={index * 0.1}>
                 <Card className="p-6">
                   <div className="flex mb-4">
@@ -259,7 +304,11 @@ const OurClients = () => {
                     "{testimonial.content}"
                   </Typography>
                   <div className="flex items-center">
-                    <div className="bg-gray-200 border-2 border-dashed rounded-xl w-12 h-12" />
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
                     <div className="ml-4">
                       <Typography variant="h5" className="font-semibold">{testimonial.name}</Typography>
                       <Typography variant="p" className="text-text-secondary text-sm">{testimonial.position}</Typography>

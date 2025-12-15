@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="mb-6">
               <Image
                 src="/logo.png"
-                alt="Greenland Overseas Logo"
+                alt="TZS International Logo"
                 width={180}
                 height={40}
                 className="h-10 w-auto"
@@ -140,7 +140,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border-light mt-12 pt-8 text-center text-sm text-text-secondary">
           <p>
-            &copy; {currentYear} Greenland Overseas (RL-040). All rights reserved.
+            &copy; {currentYear} TZS International (RL-040). All rights reserved.
           </p>
         </div>
 
