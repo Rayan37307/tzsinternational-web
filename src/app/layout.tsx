@@ -10,34 +10,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "TZS International - Travel and Tour Services",
+  title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
   description:
-    "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
+    "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. Expertise in bulk recruitment, skill development, and foreign language training.",
   keywords:
-    "travel, tours, vacation, holiday packages, international travel, adventure tours",
-  authors: [{ name: "TZS International" }],
-  creator: "TZS International",
-  publisher: "TZS International",
+    "recruitment, manpower, international recruitment, overseas jobs, skill development, foreign language training, staffing solutions, global employment",
+  authors: [{ name: "Greenland Overseas" }],
+  creator: "Greenland Overseas",
+  publisher: "Greenland Overseas",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com"
   ),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "TZS International - Travel and Tour Services",
+    title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
     description:
-      "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com",
-    siteName: "TZS International",
+      "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://greenlandoverseas.com",
+    siteName: "Greenland Overseas",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TZS International - Travel and Tour Services",
+    title: "Greenland Overseas (RL-040) - Connecting People with Possibilities",
     description:
-      "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here.",
+      "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
   },
   robots: {
     index: true,
@@ -54,7 +54,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#ff6600" />
         <link rel="apple-touch-icon" href="/logo192.png" />
       </head>
       <body className={`${poppins.variable} antialiased`}>

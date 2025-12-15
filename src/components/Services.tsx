@@ -1,6 +1,6 @@
 "use client";
 
-import { Plane, Globe, CreditCard,User,  Users, Clock, Shield, FileSearch, Ticket, HeartPulse, Briefcase, UserCog, GraduationCap, Church as Qaba } from "lucide-react";
+import { Users, Building, UserCheck, GraduationCap, Languages } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -10,85 +10,57 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
   return (
-    <div className="bg-slate-900 rounded-xl shadow-md p-6 border border-slate-800 transition-all hover:shadow-lg hover:-translate-y-1">
-      <div className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center text-secondary-400 mb-4">
+    <div className="bg-bg-card rounded-xl p-6 border border-border-light shadow-sleek transition-all hover:shadow-sleek-lg hover:-translate-y-1">
+      <div className="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-gray-100 mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+      <h3 className="text-xl font-bold text-text-main mb-2">{title}</h3>
+      <p className="text-text-secondary">{description}</p>
     </div>
   );
 };
 
 export default function Services() {
   const services = [
-        {
-      icon: <Ticket size={28} />,
-      title: "Air Ticketing",
-      description: "Book flights at competitive prices with 24/7 support for changes or cancellations."
-    },
-        {
-      icon: <UserCog size={28} />,
-      title: "Manpower",
-      description: "We connect skilled workers with international employers, handling contracts and relocation."
-    },
-    {
-      icon: <User size={28} />,
-      title: "Recruitment",
-      description: "We connect skilled workers with international employers, handling contracts and relocation."
-    },
-     {
-      icon: <Globe size={28} />,
-      title: "Work Visa",
-      description: "Secure work visas for countries like Canada, Germany, and the UAE with legal guidance."
-    },
-    {
-      icon: <Plane size={28} />,
-      title: "Visa Processing",
-      description: "End-to-end visa services for students, tourists, and professionals with a 98% success rate."
-    },
     {
       icon: <Users size={28} />,
-      title: "Tourist Visa",
-      description: "Tour visas for countries like Canada, Germany, and the UAE with legal guidance."
+      title: "MANPOWER SOURCING AND PLACEMENT",
+      description: "Comprehensive manpower sourcing and placement services tailored to meet the unique requirements of various industries."
     },
     {
-      icon: <Clock size={28} />,
-      title: "Tour Packages",
-      description: "Discover amazing destinations and tour packages with TZS International. Your journey to unforgettable experiences starts here."
+      icon: <Building size={28} />,
+      title: "BULK INTERNATIONAL RECRUITMENT",
+      description: "Efficient and cost-effective solutions for large-scale international recruitment needs with quality assurance."
     },
     {
-      icon: <Shield size={28} />,
-      title: "Medical Services",
-      description: "Access world-class healthcare facilities abroad with tailored travel and treatment packages."
+      icon: <UserCheck size={28} />,
+      title: "SPECIALIZED SKILL RECRUITMENT",
+      description: "Targeted recruitment for specialized roles requiring specific technical expertise and industry knowledge."
     },
-        {
+    {
       icon: <GraduationCap size={28} />,
-      title: "Study Abroad",
-      description: "Get admission to top universities worldwide with scholarship and accommodation support."
-    // Travel Agency Services
+      title: "SKILL DEVELOPMENT & TRAINING",
+      description: "Comprehensive training programs to enhance workforce capabilities and ensure professional development."
     },
-        {
-      icon: <Qaba size={28} />,
-      title: "Hajj & Umrah",
-      description: "Organized pilgrimage packages with visa processing, flights, and luxury accommodations."
+    {
+      icon: <Languages size={28} />,
+      title: "FOREIGN LANGUAGE TRAINING",
+      description: "Language proficiency training to support international business communication and cultural integration."
     },
   ];
 
   return (
     <section
-      className="py-4 bg-gradient-to-b from-slate-950 to-slate-900"
+      className="py-16 md:py-24 bg-bg-muted"
       id="services"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
-            Our Services
+          <h2 className="text-3xl md:text-4xl font-bold text-text-main mb-4">
+            Core <span className="text-primary-600">Services</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            We offer a comprehensive range of travel services to make your
-            journey smooth and memorable. From visa assistance to customized
-            tour packages, we've got you covered.
+          <p className="text-text-secondary max-w-2xl mx-auto">
+            We provide comprehensive manpower solutions to connect skilled professionals with global opportunities
           </p>
         </div>
 

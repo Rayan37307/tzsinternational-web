@@ -2,20 +2,18 @@
 
 import { createContext, useContext, useEffect } from "react";
 
-// Simplified context since we only have dark mode
+type Theme = "dark";
+
 type ThemeContextType = {
-  theme: "dark";
+  theme: Theme;
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Always use dark mode
   useEffect(() => {
-    // Always add dark class to document
+    // Always force dark mode
     document.documentElement.classList.add("dark");
-
-    // Save to localStorage for consistency
     localStorage.setItem("theme", "dark");
   }, []);
 
