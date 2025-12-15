@@ -30,14 +30,14 @@ const Contact = () => {
       id: 1,
       icon: <MapPin className="h-6 w-6 text-primary-600" />,
       title: 'Our Office',
-      content: 'House 22/A, Road 107, Gulshan-2, Dhaka 1212, Bangladesh',
+      content: 'Khandakar Amin Uddin Bhaban (Lift - 5), Madhani Avenue, 100 fit, Notun Bazar,Vatara, Gulshan, Dhaka-1212, Bangladesh',
       additional: 'Head Office'
     },
     {
       id: 2,
       icon: <Phone className="h-6 w-6 text-secondary-600" />,
       title: 'Phone Number',
-      content: '+880-1234-567890',
+      content: '+880-1731883700',
       additional: 'Available 24/7'
     },
     {

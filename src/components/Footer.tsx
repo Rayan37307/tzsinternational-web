@@ -82,9 +82,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="text-primary-500 mr-3 mt-1 flex-shrink-0" size={18} />
                 <span className="text-text-secondary">
-                  JL Bhaban, 1 Gulshan Avenue,<br />
-                  Gulshan-1, Dhaka-1212,<br />
-                  Bangladesh
+                  Khandakar Amin Uddin Bhaban (Lift - 5), Madhani Avenue, 100 fit, Notun Bazar,Vatara, Gulshan, Dhaka-1212, Bangladesh
                 </span>
               </li>
               <li className="flex items-center">
@@ -96,7 +94,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="text-primary-500 mr-3 flex-shrink-0" size={18} />
                 <Link href="mailto:info@greenlandoverseas.com" className="text-text-secondary hover:text-primary-700">
-                  info@greenlandoverseas.com
+                  tzsinternationalbd@gmail.com
                 </Link>
               </li>
             </ul>
