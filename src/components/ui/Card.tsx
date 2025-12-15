@@ -12,9 +12,21 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, children, hoverEffect = true, glassEffect = false, ...props }, ref) => {
+    // Separate the motion-specific props to avoid type conflicts
+    const motionProps: any = {};
+    const htmlProps: any = {};
+
+    Object.entries(props).forEach(([key, value]) => {
+      if (['whileHover', 'whileTap', 'animate', 'layout', 'initial', 'exit', 'transition'].includes(key)) {
+        motionProps[key] = value;
+      } else {
+        htmlProps[key] = value;
+      }
+    });
+
     return (
       <motion.div
-        whileHover={hoverEffect ? { y: -5 } : {}}
+        whileHover={hoverEffect ? { y: -5, ...motionProps.whileHover } : motionProps.whileHover}
         ref={ref}
         className={cn(
           `rounded-2xl border border-border-light bg-card p-6 shadow-sleek`,
@@ -22,7 +34,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           hoverEffect && 'transition-all duration-300',
           className
         )}
-        {...props}
+        {...htmlProps}
       >
         {children}
       </motion.div>

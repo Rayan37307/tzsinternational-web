@@ -16,15 +16,15 @@ interface AnimatedElementProps {
   children: ReactNode;
   type: AnimationType;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
-export default function AnimatedElement({
+const AnimatedElement = React.forwardRef<HTMLElement, AnimatedElementProps>(({
   children,
   type,
   className = "",
-  as: Component = "div",
-}: AnimatedElementProps) {
+  as: Component = "div"
+}: AnimatedElementProps, ref) => {
   const {
     addToFadeInRefs,
     addToFadeInLeftRefs,
@@ -56,9 +56,17 @@ export default function AnimatedElement({
     }
   };
 
-  return (
-    <Component ref={getRef(type)} className={className}>
-      {children}
-    </Component>
-  );
-}
+  // Combine the animation hook ref with the forwardRef
+  const combinedRef = (element: HTMLElement | null) => {
+    getRef(type)(element);
+  };
+
+  return React.createElement(Component, {
+    ref: combinedRef,
+    className
+  }, children);
+});
+
+AnimatedElement.displayName = 'AnimatedElement';
+
+export default AnimatedElement;

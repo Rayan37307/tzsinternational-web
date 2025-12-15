@@ -144,7 +144,22 @@ const Home = () => {
     }
   ];
 
-  const [clientTestimonials, setClientTestimonials] = React.useState([]);
+  type ClientTestimonial = {
+    name: {
+      first: string;
+      last: string;
+    };
+    location: {
+      city: string;
+      country: string;
+    };
+    picture: {
+      large: string;
+    };
+    testimonial: string;
+  };
+
+  const [clientTestimonials, setClientTestimonials] = React.useState<ClientTestimonial[]>([]);
 
   // Function to fetch client testimonials using Random User API
   const fetchClientTestimonials = async () => {

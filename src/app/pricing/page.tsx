@@ -147,7 +147,7 @@ const Pricing = () => {
                             </li>
                           ))}
                         </ul>
-                        <Button variant="accent-modern" className="w-full">
+                        <Button variant="gradient" className="w-full">
                           {plan.cta}
                         </Button>
                       </CardContent>
@@ -178,7 +178,7 @@ const Pricing = () => {
                             </li>
                         ))}
                       </ul>
-                      <Button variant="primary-modern" className="w-full">
+                      <Button variant="secondary" className="w-full">
                         {plan.cta}
                       </Button>
                     </CardContent>

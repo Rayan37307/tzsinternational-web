@@ -9,7 +9,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 
-export default function BlogDetailsPage({ params }: NextPage.Props) {
+type Props = {
+  params: { id: string };
+};
+
+export default function BlogDetailsPage({ params }: Props) {
   const router = useRouter();
   const [blog, setBlog] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);

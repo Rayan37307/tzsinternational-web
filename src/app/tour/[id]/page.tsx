@@ -19,7 +19,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 
-export default function TourDetailsPage({ params }: NextPage.Props) {
+type Props = {
+  params: { id: string };
+};
+
+export default function TourDetailsPage({ params }: Props) {
   const router = useRouter();
   const [tour, setTour] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);

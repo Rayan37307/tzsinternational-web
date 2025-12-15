@@ -10,7 +10,7 @@ interface NavigatorProfile {
 }
 
 interface MeetOurNavigatorsProps {
-  profiles: NavigatorProfile[];
+  profiles?: NavigatorProfile[];
 }
 
 const defaultProfiles = [

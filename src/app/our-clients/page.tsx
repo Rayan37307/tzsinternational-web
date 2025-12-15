@@ -44,7 +44,16 @@ const OurClients = () => {
     // { name: "Enterprise Name",img: "/brand1.jpeg", industry: "Hospitality" },
   ];
 
-  const [clientTestimonials, setClientTestimonials] = React.useState([]);
+  type Testimonial = {
+    name: string;
+    position: string;
+    content: string;
+    company: string;
+    rating: number;
+    avatar: string;
+  };
+
+  const [clientTestimonials, setClientTestimonials] = React.useState<Testimonial[]>([]);
 
   // Function to fetch dynamic client testimonials using Random User API
   const fetchClientTestimonials = async () => {

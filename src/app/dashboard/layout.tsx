@@ -13,15 +13,16 @@ export default function DashboardLayout({
 
   // Determine current section title based on pathname
   let sectionTitle = "Dashboard";
-  if (pathname.startsWith("/dashboard/tours")) {
+  if (pathname && pathname.startsWith("/dashboard/tours")) {
     sectionTitle = "Tour Packages";
-  } else if (pathname.startsWith("/dashboard/settings")) {
+  } else if (pathname && pathname.startsWith("/dashboard/settings")) {
     sectionTitle = "Settings";
-  } else if (pathname.startsWith("/dashboard/profile")) {
+  } else if (pathname && pathname.startsWith("/dashboard/profile")) {
     sectionTitle = "Profile";
   } else if (
-    pathname.startsWith("/dashboard/edit") ||
-    pathname.startsWith("/dashboard/new")
+    pathname &&
+    (pathname.startsWith("/dashboard/edit") ||
+    pathname.startsWith("/dashboard/new"))
   ) {
     sectionTitle = "Blog Posts";
   }
@@ -74,7 +75,7 @@ export default function DashboardLayout({
                 </a>
               </li>
 
-              {pathname !== "/dashboard" && (
+              {pathname && pathname !== "/dashboard" && (
                 <>
                   <li className="text-gray-500">/</li>
                   {pathname.startsWith("/dashboard/tours") && (

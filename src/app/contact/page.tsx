@@ -237,7 +237,6 @@ const Contact = () => {
                         onChange={handleChange}
                         rows={5}
                         placeholder="Your message here..."
-                        icon={<MessageSquare className="h-5 w-5 text-text-dim" />}
                         required
                       />
                     </div>

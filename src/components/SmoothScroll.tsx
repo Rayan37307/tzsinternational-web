@@ -122,18 +122,17 @@ export default function SmoothScroll({
     <div
       ref={scrollContainerRef}
       style={{
-        position: "fixed",
+        // Check if we're on the client side to avoid hydration issues
+        position: typeof window !== "undefined" &&
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+          ? "static" // Use static positioning for mobile
+          : "fixed", // Use fixed positioning for desktop
         top: 0,
         left: 0,
         width: "100%",
         willChange: "transform",
-        // Check if we're on the client side to avoid hydration issues
-        ...(typeof window !== "undefined" &&
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-          ? { position: "static" } // Use static positioning for mobile
-          : { position: "fixed" }), // Use fixed positioning for desktop
       }}
     >
       {children}

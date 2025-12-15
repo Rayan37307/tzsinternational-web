@@ -12,7 +12,7 @@ if (typeof window !== "undefined") {
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   direction?: "up" | "down" | "left" | "right";
   distance?: number;
   delay?: number;
@@ -90,9 +90,8 @@ export default function ScrollReveal({
     };
   }, [direction, distance, delay, duration, once]);
 
-  return (
-    <Component ref={elementRef} className={className}>
-      {children}
-    </Component>
-  );
+  return React.createElement(Component, {
+    ref: elementRef,
+    className
+  }, children);
 }

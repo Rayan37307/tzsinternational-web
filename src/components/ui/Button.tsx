@@ -34,23 +34,50 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+type BaseButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+type MotionButtonProps = React.ComponentProps<typeof motion.button>;
+
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
   loading?: boolean;
   asChild?: boolean;
+  // Explicitly define the properties we know are compatible
+  className?: string;
+  disabled?: boolean;
+  children?: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onMouseEnter?: React.MouseEventHandler<HTMLButtonElement>;
+  onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
+  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
+  type?: 'button' | 'submit' | 'reset';
+  id?: string;
+  name?: string;
+  form?: string;
+  [key: string]: any; // Allow other props to pass through
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, loading, children, ...props }, ref) => {
+    // Separate the motion-specific props to avoid type conflicts
+    const motionProps: any = {};
+    const htmlButtonProps: any = {};
+
+    Object.entries(props).forEach(([key, value]) => {
+      if (['whileHover', 'whileTap', 'animate', 'layout', 'initial', 'exit', 'transition'].includes(key)) {
+        motionProps[key] = value;
+      } else {
+        htmlButtonProps[key] = value;
+      }
+    });
+
     return (
       <motion.button
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ scale: 1.03, ...motionProps.whileHover }}
+        whileTap={{ scale: 0.98, ...motionProps.whileTap }}
         ref={ref}
         className={cn(buttonVariants({ variant, size, className }))}
-        disabled={loading}
-        {...props}
+        disabled={loading || htmlButtonProps.disabled}
+        {...htmlButtonProps}
       >
         {loading ? (
           <>

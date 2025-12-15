@@ -13,7 +13,7 @@ if (typeof window !== "undefined") {
 interface AnimatedTextProps {
   children: ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   type?: "chars" | "words" | "lines";
   stagger?: number;
   duration?: number;
@@ -72,9 +72,8 @@ export default function AnimatedText({
     };
   }, [type, stagger, duration, ease]);
 
-  return (
-    <Component ref={textRef} className={className}>
-      {children}
-    </Component>
-  );
+  return React.createElement(Component, {
+    ref: textRef,
+    className
+  }, children);
 }

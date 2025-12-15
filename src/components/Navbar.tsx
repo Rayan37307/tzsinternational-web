@@ -65,6 +65,7 @@ const Navbar = () => {
   }, [pathname]);
 
   const isActive = (href: string) => {
+    if (!pathname) return false;
     if (href === '/') {
       return pathname === '/';
     }
@@ -72,7 +73,7 @@ const Navbar = () => {
   };
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+    setActiveDropdown(activeDropdown === name ? null : (name || null));
   };
 
   const isActiveSubmenu = (submenuItems: {name: string, href: string}[]) => {
@@ -232,7 +233,7 @@ const Navbar = () => {
                               ? 'text-primary-600 bg-primary-50'
                               : 'text-text-secondary hover:text-primary-600 hover:bg-bg-muted'
                           }`}
-                          onClick={() => toggleDropdown(item.name === activeDropdown ? null : item.name)}
+                          onClick={() => toggleDropdown(item.name === activeDropdown ? '' : item.name)}
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${

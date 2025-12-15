@@ -15,7 +15,11 @@ import {
   Loader2,
 } from "lucide-react";
 
-export default function EditTourPage({ params }: NextPage.Props) {
+type Props = {
+  params: { id: string };
+};
+
+export default function EditTourPage({ params }: Props) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",

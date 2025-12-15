@@ -13,7 +13,7 @@ interface ParallaxElementProps {
   children: ReactNode;
   className?: string;
   speed?: number; // Negative values move element up, positive values move it down
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export default function ParallaxElement({
@@ -50,9 +50,8 @@ export default function ParallaxElement({
     };
   }, [speed]);
 
-  return (
-    <Component ref={elementRef} className={className}>
-      {children}
-    </Component>
-  );
+  return React.createElement(Component, {
+    ref: elementRef,
+    className
+  }, children);
 }

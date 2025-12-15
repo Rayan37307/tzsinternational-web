@@ -3,7 +3,11 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditBlogPage({ params }: NextPage.Props) {
+type Props = {
+  params: { id: string };
+};
+
+export default function EditBlogPage({ params }: Props) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",
