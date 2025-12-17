@@ -11,47 +11,10 @@ import { ScaleIn } from '@/components/animation/ScaleIn';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 const Management = () => {
   // Management team data
-  const managementTeam = [
-    {
-      name: "Management Name",
-      position: "Chief Executive Officer",
-      image: "/placeholder-management.jpg",
-      bio: "Over 15 years of experience in international recruitment with a focus on strategic growth and innovation."
-    },
-    {
-      name: "Management Name",
-      position: "Chief Operations Officer",
-      image: "/placeholder-management.jpg",
-      bio: "Expert in operational excellence and process optimization with global industry experience."
-    },
-    {
-      name: "Management Name",
-      position: "Chief Financial Officer",
-      image: "/placeholder-management.jpg",
-      bio: "Finance specialist with expertise in international markets and sustainable business growth."
-    },
-    {
-      name: "Management Name",
-      position: "Head of Human Resources",
-      image: "/placeholder-management.jpg",
-      bio: "Talent acquisition specialist focused on building high-performing teams globally."
-    },
-    {
-      name: "Management Name",
-      position: "Director of International Relations",
-      image: "/placeholder-management.jpg",
-      bio: "Specialist in building and maintaining strategic partnerships across multiple continents."
-    },
-    {
-      name: "Management Name",
-      position: "Director of Technology",
-      image: "/placeholder-management.jpg",
-      bio: "Technology visionary leading our digital transformation and AI-powered recruitment solutions."
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-bg-main text-text-main">
@@ -135,15 +98,23 @@ const Management = () => {
           </SlideUp>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {managementTeam.map((member, index) => (
-              <ScaleIn key={index} delay={index * 0.1}>
-                <Card className="overflow-hidden group hover:shadow-xl transition-shadow">
-                  <div className="h-64 bg-gray-200 border-2 border-dashed rounded-t-xl w-full" />
-                  <CardContent className="p-6">
-                    <Typography variant="h4" className="mb-2">{member.name}</Typography>
-                    <Typography variant="p" className="text-primary-600 font-medium mb-3">{member.position}</Typography>
-                    <Typography variant="p" className="text-text-secondary">
-                      {member.bio}
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/advisor.jpeg"
+    alt="founder"
+    fill
+    sizes="100vw"
+    className="object-cover obje"
+    priority
+  />
+</div>
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Md Nurul Islam</Typography>
+                    <Typography variant="p" className="text-text-secondary">Hounorary Advisor</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
                     </Typography>
                     <div className="flex justify-center mt-6 space-x-4">
                       <Button variant="ghost" size="icon">
@@ -159,7 +130,103 @@ const Management = () => {
                   </CardContent>
                 </Card>
               </ScaleIn>
-            ))}
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/founder.png"
+    alt="founder"
+    fill
+    sizes="100vw"
+    className="object-cover object-[center_20%]"
+    priority
+  />
+</div>
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Muhammad Tariqul Islam</Typography>
+                    <Typography variant="p" className="text-text-secondary">Founder & CEO</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 12+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/managingdirector.png"
+    alt="founder"
+    fill
+    sizes="100vw"
+    className="object-cover obje"
+    priority
+  />
+</div>
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Shirin Akther</Typography>
+                    <Typography variant="p" className="text-text-secondary">Managing Director</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/director.png"
+    alt="director"
+    fill
+    sizes="100vw"
+    className="object-cover objec"
+    priority
+  />
+</div>
+
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
+                    <Typography variant="p" className="text-text-secondary">Director</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
           </div>
         </div>
       </section>

@@ -47,14 +47,25 @@ const Footer = () => {
               Connecting people with possibilities through our comprehensive recruitment and manpower solutions.
             </Typography>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Facebook className="h-5 w-5" />
-              </Button>
+              <Link href="https://www.facebook.com/share/1E6NUGYre8/" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="https://www.instagram.com/tzsinternational?igsh=MThpMm5nNDE2OW0wbw==" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="https://www.tiktok.com/@tzs.international?_r=1&_t=ZS-92Is3FT379o" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.13-.05-2.29-.32-3.31-.86-2.27-1.16-3.97-3.47-4.01-5.67-.06-2.2.93-4.8 2.2-6.54zm-.4 8.32c.05 1.56-.32 3.27-1.28 4.6-1.01 1.32-2.75 2.16-4.3 1.99-1.2-.13-2.4-.62-3.3-1.4-.67-.65-1.49-1.78-1.32-2.64.07-.52.75-.98 1.28-.98.68 0 1.26.22 1.78.44.75.31 1.36.75 1.84 1.3.48.55.84 1.2 1.05 1.89.2.69.25 1.4.15 2.11-.09.71-.33 1.41-.73 2.02-.4.61-.94 1.12-1.57 1.49-.63.37-1.36.59-2.07.63-.71.04-1.42-.04-2.1-.25-.68-.21-1.32-.57-1.85-1.04-.52-.47-.93-1.07-1.17-1.72-.24-.65-.3-1.35-.18-2.03.12-.68.41-1.34.85-1.89.44-.55 1.04-1 1.72-1.25.68-.25 1.42-.29 2.11-.13.69.16 1.33.53 1.8 1.06.47.53.75 1.2.82 1.87.07.67-.07 1.36-.4 1.95-.33.59-.85 1.07-1.47 1.36-.62.29-1.32.39-1.99.29-.67-.1-1.3-.4-1.82-.87-.52-.47-.9-1.09-1.09-1.76-.05-.67.09-1.35.4-1.94.31-.59.79-1.08 1.37-1.4.58-.32 1.25-.48 1.88-.45.63.03 1.25.26 1.76.64.51.38.9 1.01 1.06 1.61z"/>
+                  </svg>
+                </Button>
+              </Link>
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Twitter className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Instagram className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Linkedin className="h-5 w-5" />

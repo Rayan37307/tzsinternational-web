@@ -108,41 +108,7 @@ const Home = () => {
     { country: "Singapore", count: "200+", flag: "🇸🇬" }
   ];
 
-  // Team members data
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Ahmed Hassan",
-      position: "Senior Recruitment Specialist",
-      experience: "8+ years",
-      expertise: ["IT", "Engineering", "Finance"],
-      image: "https://source.unsplash.com/100x100/?portrait,man,business"
-    },
-    {
-      id: 2,
-      name: "Priya Sharma",
-      position: "HR Consultant",
-      experience: "6+ years",
-      expertise: ["Healthcare", "Education", "Hospitality"],
-      image: "https://source.unsplash.com/100x100/?portrait,woman,business"
-    },
-    {
-      id: 3,
-      name: "David Kim",
-      position: "Legal Advisor",
-      experience: "10+ years",
-      expertise: ["Immigration", "Compliance", "Documentation"],
-      image: "https://source.unsplash.com/100x100/?portrait,glasses,business"
-    },
-    {
-      id: 4,
-      name: "Maria Rodriguez",
-      position: "Cultural Liaison",
-      experience: "5+ years",
-      expertise: ["Cross-cultural", "Communication", "Integration"],
-      image: "https://source.unsplash.com/100x100/?portrait,smile,professional"
-    }
-  ];
+  
 
   type ClientTestimonial = {
     name: {
@@ -379,20 +345,19 @@ const Home = () => {
                 <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
                   <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
   <Image
-    src="/director.png"
-    alt="director"
+    src="/advisor.jpeg"
+    alt="founder"
     fill
     sizes="100vw"
-    className="object-cover objec"
+    className="object-cover obje"
     priority
   />
 </div>
-
                   <CardContent className="pt-6">
-                    <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
-                    <Typography variant="p" className="text-text-secondary">Director</Typography>
+                    <Typography variant="h4">Md Nurul Islam</Typography>
+                    <Typography variant="p" className="text-text-secondary">Hounorary Advisor</Typography>
                     <Typography variant="p" className="text-text-secondary mt-4">
-                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
+                      Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
                     </Typography>
                     <div className="flex justify-center mt-6 space-x-4">
                       <Button variant="ghost" size="icon">
@@ -457,6 +422,39 @@ const Home = () => {
                     <Typography variant="p" className="text-text-secondary">Managing Director</Typography>
                     <Typography variant="p" className="text-text-secondary mt-4">
                       Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/director.png"
+    alt="director"
+    fill
+    sizes="100vw"
+    className="object-cover objec"
+    priority
+  />
+</div>
+
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
+                    <Typography variant="p" className="text-text-secondary">Director</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
                     </Typography>
                     <div className="flex justify-center mt-6 space-x-4">
                       <Button variant="ghost" size="icon">

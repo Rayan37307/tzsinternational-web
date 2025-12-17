@@ -17,15 +17,9 @@ const menuItems = [
       { name: 'Management', href: '/management' }
     ]
   },
-  {
-    name: 'Workmanship',
-    href: '#',
-    submenu: [
       { name: 'Why Choose Us', href: '/whychoose' },
       { name: 'Recruitment Policy', href: '/recuitmentpolicy' },
-      { name: 'Appreciation', href: '/appreciation' }
-    ]
-  },
+      { name: 'Appreciation', href: '/appreciation' },
   // { name: 'Licence', href: '/licence' },
   // { name: 'Document', href: '/document' },
   { name: 'Our Clients', href: '/our-clients' },
@@ -180,19 +174,6 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href="/contact"
-                className={`px-6 py-2.5 rounded-xl bg-gradient-modern text-white font-medium transition-all duration-300 hover:shadow-lg`}
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
