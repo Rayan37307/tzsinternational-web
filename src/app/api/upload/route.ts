@@ -20,6 +20,22 @@ export async function POST(req: Request) {
   }
 
   try {
+    // Validate file type
+    if (!file.type || !file.type.startsWith('image/')) {
+      return NextResponse.json(
+        { error: 'Invalid file type. Only images are allowed.' },
+        { status: 400 }
+      );
+    }
+
+    // Validate file size (limit to 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      return NextResponse.json(
+        { error: 'File too large. Maximum size is 5MB.' },
+        { status: 400 }
+      );
+    }
+
     // Convert file to buffer
     const buffer = Buffer.from(await file.arrayBuffer());
 
@@ -35,8 +51,9 @@ export async function POST(req: Request) {
     });
 
   } catch (error) {
+    console.error('Upload API error:', error);
     return NextResponse.json(
-      { error: 'Upload failed' },
+      { error: error instanceof Error ? error.message : 'Upload failed' },
       { status: 500 }
     );
   }

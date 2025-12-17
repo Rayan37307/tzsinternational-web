@@ -123,20 +123,10 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li className="mt-3">
-                <span className="text-text-secondary text-sm font-medium">About Subpages:</span>
-                <ul className="mt-2 space-y-1 pl-4">
                   <li><Link href="/founders-legacy" className="text-text-secondary hover:text-primary-700 transition-colors text-sm">Founder's Legacy</Link></li>
                   <li><Link href="/management" className="text-text-secondary hover:text-primary-700 transition-colors text-sm">Management</Link></li>
-                </ul>
-              </li>
-              <li className="mt-3">
-                <span className="text-text-secondary text-sm font-medium">Workmanship Subpages:</span>
-                <ul className="mt-2 space-y-1 pl-4">
                   <li><Link href="/recuitmentpolicy" className="text-text-secondary hover:text-primary-700 transition-colors text-sm">Recruitment Policy</Link></li>
                   <li><Link href="/appreciation" className="text-text-secondary hover:text-primary-700 transition-colors text-sm">Appreciation</Link></li>
-                </ul>
-              </li>
               <li className="mt-3">
                 <Link href="/licence" className="text-text-secondary hover:text-primary-700 transition-colors">Licence</Link>
               </li>
