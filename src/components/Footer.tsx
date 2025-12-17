@@ -87,8 +87,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="text-primary-500 mr-3 flex-shrink-0" size={18} />
-                <Link href="tel:+8801731883700" className="text-text-secondary hover:text-primary-700">
-                  +880 1731-883700
+                <Link href="tel:+8801618-008842" className="text-text-secondary hover:text-primary-700">
+                  +880 1618-008842
                 </Link>
               </li>
               <li className="flex items-center">
@@ -149,15 +149,6 @@ const Footer = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 1, type: "spring", stiffness: 200 }}
         >
-          {/* <Link
-            href="https://wa.me/8801731883700"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center"
-            aria-label="Chat with us on WhatsApp"
-          >
-            <Send className="h-6 w-6" />
-          </Link> */}
         </motion.div>
       </div>
     </footer>
