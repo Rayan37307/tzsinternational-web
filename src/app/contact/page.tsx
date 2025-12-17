@@ -37,7 +37,7 @@ const Contact = () => {
       id: 2,
       icon: <Phone className="h-6 w-6 text-secondary-600" />,
       title: 'Phone Number',
-      content: '+880-1731883700',
+      content: '+880-1618-008842',
       additional: 'Available 24/7'
     },
     {
