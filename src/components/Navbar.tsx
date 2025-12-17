@@ -99,9 +99,9 @@ const Navbar = () => {
               <Image
                 src="/logo.png"
                 alt="TZS International Logo"
-                width={190}
-                height={62}
-                className="h-8 w-auto transition-transform hover:scale-105"
+                width={210}
+                height={82}
+                className="h-12 w-auto transition-transform hover:scale-105"
               />
             </div>
           </Link>
