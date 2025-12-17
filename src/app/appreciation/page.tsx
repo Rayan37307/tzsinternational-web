@@ -64,26 +64,6 @@ const Appreciation = () => {
   ];
 
   // Partner appreciations
-  const partners = [
-    {
-      name: "Partner Company",
-      logo: "/placeholder-logo.jpg",
-      content: "TZS International has been an invaluable partner, consistently delivering quality candidates and exceptional service.",
-      date: "2023-05-15"
-    },
-    {
-      name: "Partner Company",
-      logo: "/placeholder-logo.jpg",
-      content: "Their commitment to excellence and ethical practices makes them our preferred recruitment partner.",
-      date: "2023-02-20"
-    },
-    {
-      name: "Partner Company",
-      logo: "/placeholder-logo.jpg",
-      content: "Outstanding professionalism and results-driven approach. A true partner in our growth journey.",
-      date: "2022-11-10"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-bg-main text-text-main">
@@ -231,44 +211,6 @@ const Appreciation = () => {
       </section>
 
       {/* Partner Appreciations */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <SlideUp>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <Typography variant="h2" className="mb-4">Partner Recognition</Typography>
-              <Typography variant="p" className="text-lg text-text-secondary">
-                Appreciation from our valued business partners
-              </Typography>
-            </div>
-          </SlideUp>
-          
-          <div className="space-y-8">
-            {partners.map((partner, index) => (
-              <ScaleIn key={index} delay={index * 0.1}>
-                <Card className="p-8">
-                  <div className="flex flex-col md:flex-row items-start">
-                    <div className="mb-4 md:mb-0 md:mr-6">
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center mb-2">
-                        <Typography variant="h5" className="font-semibold mr-4">{partner.name}</Typography>
-                        <Typography variant="p" className="text-text-secondary text-sm">
-                          <Calendar className="inline mr-1 h-4 w-4" />
-                          {new Date(partner.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                        </Typography>
-                      </div>
-                      <Typography variant="p" className="text-text-secondary mb-4">
-                        "{partner.content}"
-                      </Typography>
-                    </div>
-                  </div>
-                </Card>
-              </ScaleIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Milestones */}
       <section className="py-20 bg-bg-muted">
@@ -324,28 +266,6 @@ const Appreciation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <FadeIn>
-            <Card className="bg-gradient-accent text-white p-0 overflow-hidden">
-              <div className="p-12 text-center">
-                <Typography variant="h2" className="mb-6 text-white">Join Our Success Story</Typography>
-                <Typography variant="p" className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-                  Be part of our journey and experience the excellence that sets us apart.
-                </Typography>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
-                    Contact Us
-                  </Button>
-                  <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </FadeIn>
-        </div>
-      </section>
       
       <Footer />
     </div>

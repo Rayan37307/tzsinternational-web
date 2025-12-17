@@ -198,7 +198,7 @@ const Management = () => {
                 <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
                   <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
   <Image
-    src="/director.png"
+    src="/director.jpeg"
     alt="director"
     fill
     sizes="100vw"
@@ -210,6 +210,39 @@ const Management = () => {
                   <CardContent className="pt-6">
                     <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
                     <Typography variant="p" className="text-text-secondary">Director</Typography>
+                    <Typography variant="p" className="text-text-secondary mt-4">
+                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
+                    </Typography>
+                    <div className="flex justify-center mt-6 space-x-4">
+                      <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Users className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Award className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
+  <Image
+    src="/cordinator.jpeg"
+    alt="director"
+    fill
+    sizes="100vw"
+    className="object-cover objec"
+    priority
+  />
+</div>
+
+                  <CardContent className="pt-6">
+                    <Typography variant="h4">Touhidul Islam Tohin</Typography>
+                    <Typography variant="p" className="text-text-secondary">Cordinator of Singapore & Malaysia</Typography>
                     <Typography variant="p" className="text-text-secondary mt-4">
                       Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
                     </Typography>
@@ -286,29 +319,6 @@ const Management = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <FadeIn>
-            <Card className="bg-gradient-accent text-white p-0 overflow-hidden">
-              <div className="p-12 text-center">
-                <Typography variant="h2" className="mb-6 text-white">Connect with Our Team</Typography>
-                <Typography variant="p" className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-                  Interested in working with our management team? Contact us to learn more.
-                </Typography>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
-                    Contact Us
-                  </Button>
-                  <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </FadeIn>
-        </div>
-      </section>
       
       <Footer />
     </div>

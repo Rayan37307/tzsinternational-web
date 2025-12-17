@@ -310,29 +310,6 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <FadeIn>
-            <div className="bg-gradient-accent rounded-3xl p-12 text-center">
-              <Typography variant="h2" className="mb-6 text-white">Need Immediate Assistance?</Typography>
-              <Typography variant="p" className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-                For urgent matters, please contact our 24/7 support line directly.
-              </Typography>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="xl" className="bg-black text-primary-600 hover:bg-gray-100">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call Us Now
-                </Button>
-                <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">
-                  <MailIcon className="h-5 w-5 mr-2" />
-                  Email Support
-                </Button>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-      
       <Footer />
     </div>
   );

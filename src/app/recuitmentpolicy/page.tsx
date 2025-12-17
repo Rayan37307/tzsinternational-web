@@ -281,29 +281,6 @@ const RecuitmentPolicy = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <FadeIn>
-            <Card className="bg-gradient-accent text-white p-0 overflow-hidden">
-              <div className="p-12 text-center">
-                <Typography variant="h2" className="mb-6 text-white">Our Policy Commitment</Typography>
-                <Typography variant="p" className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-                  We continuously review and update our policies to maintain the highest standards of ethical recruitment.
-                </Typography>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="xl" className="bg-white text-primary-600 hover:bg-gray-100">
-                    Contact Us
-                  </Button>
-                  <Button variant="outline" size="xl" className="border-white text-white hover:bg-white/10">
-                    Download Policy
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </FadeIn>
-        </div>
-      </section>
       
       <Footer />
     </div>

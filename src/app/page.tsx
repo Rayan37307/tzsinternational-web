@@ -437,39 +437,6 @@ const Home = () => {
                   </CardContent>
                 </Card>
               </ScaleIn>
-              <ScaleIn>
-                <Card className="text-center overflow-hidden group hover:shadow-xl transition-shadow">
-                  <div className="relative h-82 w-full bg-gray-200 border-2 border-dashed rounded-t-xl overflow-hidden">
-  <Image
-    src="/director.png"
-    alt="director"
-    fill
-    sizes="100vw"
-    className="object-cover objec"
-    priority
-  />
-</div>
-
-                  <CardContent className="pt-6">
-                    <Typography variant="h4">M Hafizur Rahman Jhinu</Typography>
-                    <Typography variant="p" className="text-text-secondary">Director</Typography>
-                    <Typography variant="p" className="text-text-secondary mt-4">
-                      Expert navigator with 14+ years of experience in international recruitment and manpower solutions.
-                    </Typography>
-                    <div className="flex justify-center mt-6 space-x-4">
-                      <Button variant="ghost" size="icon">
-                        <Globe className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon">
-                        <Users className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon">
-                        <Award className="h-5 w-5" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScaleIn>
           </div>
         </div>
       </section>
