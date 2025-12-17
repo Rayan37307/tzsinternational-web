@@ -4,8 +4,20 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 
+interface BlogPost {
+  _id?: string;
+  id?: string;
+  title: string;
+  content: string;
+  createdAt: string;
+  tags: string[];
+  coverImage?: {
+    url: string;
+  };
+}
+
 export default function Blogs() {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -16,7 +28,7 @@ export default function Blogs() {
         if (!res.ok) {
           throw new Error(`Error: ${res.status}`);
         }
-        const data = await res.json();
+        const data: BlogPost[] = await res.json();
         setBlogs(data);
       } catch (err) {
         console.error("Failed to fetch blogs:", err);
@@ -70,37 +82,24 @@ export default function Blogs() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                id: 1,
-                title: "Global Employment Trends 2024",
-                content: "Understanding the latest trends in international recruitment and how they impact job seekers.",
-                createdAt: new Date().toISOString(),
-                tags: ["Trends", "Employment"]
-              },
-              {
-                id: 2,
-                title: "Preparing for International Work",
-                content: "Essential steps and documentation needed for international employment opportunities.",
-                createdAt: new Date(Date.now() - 86400000).toISOString(), // yesterday
-                tags: ["Preparation", "Documentation"]
-              },
-              {
-                id: 3,
-                title: "Skill Development Programs",
-                content: "How our training programs help candidates meet international employment standards.",
-                createdAt: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
-                tags: ["Training", "Skills"]
-              }
-            ].slice(0, 3).map((article) => (
+            {blogs.map((article) => (
               <div
-                key={article.id}
+                key={article._id || article.id}
                 className="bg-bg-card rounded-xl shadow-sleek overflow-hidden transition-all hover:shadow-sleek-lg hover:-translate-y-1 border border-border-light"
               >
                 <div className="relative h-52">
-                  <div className="bg-gray-200 border-2 border-dashed border-border-light w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500">Article Image</span>
-                  </div>
+                  {article.coverImage ? (
+                    <Image
+                      src={article.coverImage.url}
+                      alt={article.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="bg-gray-200 border-2 border-dashed border-border-light w-full h-full flex items-center justify-center">
+                      <span className="text-gray-500">Article Image</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6">
@@ -133,7 +132,7 @@ export default function Blogs() {
                     </div>
 
                     <Link
-                      href={`/blog/${article.id}`}
+                      href={`/blog/${article._id || article.id}`}
                       className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center"
                     >
                       Read More

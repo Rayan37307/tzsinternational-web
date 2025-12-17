@@ -11,11 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Tzs International - Connecting People with Possibilities",
+  title: "Tzs International - Best Overseas in Bangladesh",
   description:
     "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities. Expertise in bulk recruitment, skill development, and foreign language training.",
   keywords:
-    "recruitment, manpower, international recruitment, overseas jobs, skill development, foreign language training, staffing solutions, global employment",
+  "recruitment, manpower, international recruitment, overseas jobs, skill development, foreign language training, staffing solutions, global employment, best overseas, overseas, best overseas in bangladesh, bangladesh, overseas in bangladesh, dhaka, overseas in dhaka, overseas near me, near me, work visa, cleaner, welder, carpenters, scalffholders, hospital cleaner, market cleaner, mousque cleaner, trolly boy, airport cleaner, ministry cleaner, mason",
   authors: [{ name: "Tzs International" }],
   creator: "Tzs International",
   publisher: "Tzs International",

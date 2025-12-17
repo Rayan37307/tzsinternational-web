@@ -24,6 +24,7 @@ const menuItems = [
   // { name: 'Document', href: '/document' },
   { name: 'Our Clients', href: '/our-clients' },
   { name: 'Gallery', href: '/gallery' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact Us', href: '/contact' },
 ];
 

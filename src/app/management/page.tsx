@@ -114,7 +114,7 @@ const Management = () => {
                     <Typography variant="h4">Md Nurul Islam</Typography>
                     <Typography variant="p" className="text-text-secondary">Hounorary Advisor</Typography>
                     <Typography variant="p" className="text-text-secondary mt-4">
-                      Expert navigator with 10+ years of experience in international recruitment and manpower solutions.
+                      Expert navigator with 30+ years of experience in international recruitment and manpower solutions.
                     </Typography>
                     <div className="flex justify-center mt-6 space-x-4">
                       <Button variant="ghost" size="icon">

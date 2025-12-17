@@ -8,12 +8,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 
+interface BlogPost {
+  _id?: string;
+  id?: string;
+  title: string;
+  content: string;
+  createdAt: string;
+  updatedAt?: string;
+  tags: string[];
+  author?: string;
+  coverImage?: {
+    url: string;
+  };
+}
+
 export default function BlogPage() {
-  const [blogs, setBlogs] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTag, setSelectedTag] = useState("");
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedTag, setSelectedTag] = useState<string>("");
   const [allTags, setAllTags] = useState<string[]>([]);
 
   useEffect(() => {
@@ -23,11 +37,11 @@ export default function BlogPage() {
         if (!res.ok) {
           throw new Error(`Error: ${res.status}`);
         }
-        const data = await res.json();
+        const data: BlogPost[] = await res.json();
         setBlogs(data);
 
         // Extract all unique tags
-        const tags = data.flatMap((blog: any) => blog.tags || []);
+        const tags = data.flatMap((blog: BlogPost) => blog.tags || []);
         const uniqueTags = Array.from(new Set(tags)) as string[];
         setAllTags(uniqueTags);
       } catch (err) {
@@ -42,7 +56,7 @@ export default function BlogPage() {
   }, []);
 
   // Filter blogs based on search term and selected tag
-  const filteredBlogs = blogs.filter((blog: any) => {
+  const filteredBlogs = blogs.filter((blog: BlogPost) => {
     const matchesSearch =
       blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       blog.content.toLowerCase().includes(searchTerm.toLowerCase());
@@ -64,45 +78,49 @@ export default function BlogPage() {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-bg-main text-text-main">
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative h-80 bg-slate-800">
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 opacity-90"></div>
-          <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our Blog
+      <div className="pt-24" /> {/* Space for fixed navbar */}
+
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-text-main mb-4">
+              Our <span className="text-primary-600">Blog</span>
             </h1>
-            <p className="text-xl text-white max-w-2xl">
-              Discover travel tips, destination guides, and stories from our
-              adventures around the world.
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+              Insights, tips, and trends in international recruitment and career development
             </p>
           </div>
         </div>
+      </section>
 
-        {/* Search and Filters */}
-        <div className="container mx-auto px-4 py-8">
-          <div className="bg-slate-900 rounded-lg shadow-md p-6 mb-8 border border-slate-800">
+      {/* Search and Filters */}
+      <section className="py-12 bg-bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
               {/* Search */}
-              <div className="flex-1 relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Search size={18} className="text-gray-400" />
-                </div>
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary h-5 w-5" />
                 <input
                   type="text"
                   placeholder="Search blog posts..."
-                  className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
+                  className="w-full pl-10 pr-4 py-3 bg-bg-input rounded-lg border border-border-light focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
 
               {/* Tag Filter */}
-              <div className="w-full md:w-64">
+              <div className="relative">
                 <select
-                  className="w-full p-2 bg-slate-800 border border-slate-700 text-gray-200 rounded-md focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
+                  className="w-full pl-10 pr-8 py-3 bg-bg-input rounded-lg border border-border-light focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all appearance-none"
                   value={selectedTag}
                   onChange={(e) => setSelectedTag(e.target.value)}
                 >
@@ -116,48 +134,32 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Tags List */}
-          {allTags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-8">
-              <button
-                onClick={() => setSelectedTag("")}
-                className={`px-3 py-1 rounded-full text-sm ${
-                  selectedTag === ""
-                    ? "bg-secondary-500 text-white"
-                    : "bg-slate-800 text-gray-300 hover:bg-slate-700"
-                }`}
-              >
-                All
-              </button>
-              {allTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setSelectedTag(tag)}
-                  className={`px-3 py-1 rounded-full text-sm ${
-                    selectedTag === tag
-                      ? "bg-secondary-500 text-white"
-                      : "bg-slate-800 text-gray-300 hover:bg-slate-700"
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
+      {/* Blog Posts */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-4 text-text-main">Latest Articles</h2>
+              <p className="text-text-secondary">
+                {filteredBlogs.length} {filteredBlogs.length === 1 ? 'article' : 'articles'} found
+              </p>
             </div>
-          )}
+          </div>
 
-          {/* Blog Posts */}
           {isLoading ? (
             <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-secondary-500"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
             </div>
           ) : error ? (
             <div className="text-center py-20">
-              <p className="text-red-400 text-xl">{error}</p>
+              <p className="text-red-500 text-xl">{error}</p>
             </div>
           ) : filteredBlogs.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-400 text-xl">
+              <p className="text-text-secondary text-xl">
                 No blog posts found matching your criteria.
               </p>
             </div>
@@ -166,25 +168,38 @@ export default function BlogPage() {
               {filteredBlogs.map((blog: any) => (
                 <div
                   key={blog._id}
-                  className="bg-slate-900 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border border-slate-800"
+                  className="bg-bg-card rounded-xl shadow-sleek overflow-hidden group hover:shadow-sleek-lg hover:-translate-y-1 border border-border-light"
                 >
-                  <div className="relative h-48">
-                    <Image
-                      src={blog.coverImage.url}
-                      alt={blog.title}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative h-52">
+                    {blog?.coverImage?.url ? (
+                      <Image
+                        src={blog.coverImage.url}
+                        alt={blog.title}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="bg-gray-200 border-2 border-dashed border-border-light w-full h-full flex items-center justify-center">
+                        <span className="text-gray-500">Blog Image</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center text-gray-400 text-sm mb-2">
-                      <Calendar size={14} className="mr-1 text-secondary-500" />
+                    <div className="flex items-center text-text-secondary text-sm mb-3">
+                      <Calendar size={14} className="mr-1 text-primary-500" />
                       <span>{formatDate(blog.createdAt)}</span>
+
+                      {blog.tags && blog.tags.length > 0 && (
+                        <div className="flex items-center ml-4">
+                          <Tag size={14} className="mr-1 text-primary-500" />
+                          <span className="text-text-secondary">{blog.tags[0]}</span>
+                        </div>
+                      )}
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-100">
+                    <h3 className="text-xl font-bold mb-3 text-text-main line-clamp-2">
                       {blog.title}
                     </h3>
-                    <p className="text-gray-400 mb-4 line-clamp-3">
+                    <p className="text-text-secondary mb-4 line-clamp-3">
                       {blog.content}
                     </p>
 
@@ -194,7 +209,7 @@ export default function BlogPage() {
                         {blog.tags.map((tag: string) => (
                           <span
                             key={tag}
-                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-gray-300"
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-bg-main text-text-secondary border border-border-light"
                           >
                             {tag}
                           </span>
@@ -204,7 +219,7 @@ export default function BlogPage() {
 
                     <Link
                       href={`/blog/${blog._id}`}
-                      className="text-secondary-500 hover:text-secondary-400 font-medium inline-flex items-center"
+                      className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center"
                     >
                       Read More
                       <svg
@@ -228,9 +243,9 @@ export default function BlogPage() {
             </div>
           )}
         </div>
-      </main>
+      </section>
+
       <Footer />
-      <Whatsapp />
-    </>
+    </div>
   );
 }

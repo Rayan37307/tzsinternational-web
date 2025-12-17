@@ -111,6 +111,7 @@ const Footer = () => {
             </ul>
           </div>
 
+
           {/* Quick Links */}
           <div>
             <Typography variant="h5" className="text-lg font-semibold mb-5 text-text-main">Quick Links</Typography>
@@ -149,7 +150,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border-light mt-12 pt-8 text-center text-sm text-text-secondary">
           <p>
-            &copy; {currentYear} TZS International (RL-040). All rights reserved.
+            &copy; {currentYear} TZS International. All rights reserved.
           </p>
         </div>
 

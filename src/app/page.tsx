@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import BlogSlider from '@/components/BlogSlider';
 
 const Home = () => {
   // Features data
@@ -311,19 +312,94 @@ const Home = () => {
           </FadeIn>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3].map((item, index) => (
-              <ScaleIn key={index} delay={index * 0.05}>
+              <ScaleIn>
                 <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
-                  <div className="h-24 bg-gray-200 border-2 border-dashed rounded-xl w-full flex items-center justify-center mx-auto">
-                    <span className="text-gray-500">Partner {index + 1}</span>
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner1.jpg"} width={200} height={100} alt={"partner1"} className={"h-32 m-12 object-cover w-auto"} />
                   </div>
                   <CardContent className="pt-4">
-                    <Typography variant="h5" className="font-semibold">Partner Name</Typography>
-                    <Typography variant="p" className="text-text-secondary text-sm">Industry Sector</Typography>
+                    <Typography variant="h5" className="font-semibold">Sinopec</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Shipping company</Typography>
                   </CardContent>
                 </Card>
               </ScaleIn>
-            ))}
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner2.png"} width={200} height={100} alt={"partner2"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">AlBAIK</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Resturant</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/sasco.jpeg"} width={200} height={100} alt={"partner3"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">SASCO.</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Construction</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner4.jpg"} width={200} height={100} alt={"partner4"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">Almajal Alarabi</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Group Of Company</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner5.png"} width={200} height={100} alt={"partner5"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">NAZ CORP.</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Factory</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner6.png"} width={200} height={100} alt={"partner6"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">Transguard</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Guarding searvice for transportation</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner7.svg"} width={200} height={100} alt={"partner7"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">Al Mulla Group</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Business</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
+              <ScaleIn>
+                <Card className="text-center p-6 overflow-hidden group hover:shadow-xl transition-shadow">
+                  <div className="h-24 w-full flex items-center justify-center mx-auto">
+                    <Image src={"/partner8.png"} width={200} height={100} alt={"partner8"} className={"h-32 m-12 object-cover w-auto"} />
+                  </div>
+                  <CardContent className="pt-4">
+                    <Typography variant="h5" className="font-semibold">Fahed Group of Companies</Typography>
+                    <Typography variant="p" className="text-text-secondary text-sm">Group Company</Typography>
+                  </CardContent>
+                </Card>
+              </ScaleIn>
           </div>
         </div>
       </section>
@@ -533,6 +609,13 @@ const Home = () => {
               </div>
             </Card>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Blog Posts Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <BlogSlider />
         </div>
       </section>
 
