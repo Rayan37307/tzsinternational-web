@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import {
-  AnimatedElement,
   AnimatedText,
   ParallaxElement,
   ScrollReveal,
-  StaggerContainer,
 } from "@/components/animations";
 
 export default function Hero() {

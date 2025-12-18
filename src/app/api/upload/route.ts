@@ -1,14 +1,31 @@
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 
-// Configure Cloudinary once
+// Check if all required environment variables are present
+const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+const apiKey = process.env.CLOUDINARY_API_KEY;
+const apiSecret = process.env.CLOUDINARY_API_SECRET;
+
+if (!cloudName || !apiKey || !apiSecret) {
+  console.error('Missing Cloudinary configuration. Please ensure CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_API_SECRET are set in your environment.');
+}
+
+// Initialize Cloudinary with environment variables
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: cloudName,
+  api_key: apiKey,
+  api_secret: apiSecret,
 });
 
 export async function POST(req: Request) {
+  // Check if Cloudinary is properly configured
+  if (!cloudName || !apiKey || !apiSecret) {
+    return NextResponse.json(
+      { error: 'Server configuration error: Cloudinary credentials are missing' },
+      { status: 500 }
+    );
+  }
+
   const formData = await req.formData();
   const file = formData.get('file') as File | null;
 
@@ -39,11 +56,21 @@ export async function POST(req: Request) {
     // Convert file to buffer
     const buffer = Buffer.from(await file.arrayBuffer());
 
-    // Upload to Cloudinary (base64 approach - simplest method)
+    // Construct the base64 string properly
+    const base64String = buffer.toString('base64');
+    const fileUri = `data:${file.type};base64,${base64String}`;
+
+    console.log('About to upload to Cloudinary with type:', file.type);
+    console.log('File URI length:', fileUri.length);
+
     const result = await cloudinary.uploader.upload(
-      `data:${file.type};base64,${buffer.toString('base64')}`,
-      { folder: 'blog-images' }
+      fileUri,
+      {
+        folder: 'blog-images',
+        resource_type: 'auto' // Specify the resource type automatically
+      }
     );
+    console.log('Upload result:', result);
 
     return NextResponse.json({
       url: result.secure_url,
@@ -52,8 +79,16 @@ export async function POST(req: Request) {
 
   } catch (error) {
     console.error('Upload API error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Upload failed';
+
+    // Log the specific error for debugging
+    console.error('Detailed error:', {
+      message: errorMessage,
+      stack: error instanceof Error ? error.stack : undefined
+    });
+
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Upload failed' },
+      { error: errorMessage },
       { status: 500 }
     );
   }

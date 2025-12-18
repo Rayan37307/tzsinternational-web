@@ -41,7 +41,16 @@ export default function ImageUploader({ onImageUploaded, currentImage }: ImageUp
       onImageUploaded({ url: data.url, publicId: data.publicId })
     } catch (err) {
       console.error('Upload error details:', err);
-      const errorMessage = err instanceof Error ? err.message : 'Failed to upload image. Please try again.';
+      let errorMessage = 'Failed to upload image. Please try again.';
+
+      if (err instanceof Error) {
+        if (err.message.includes('Cloudinary credentials')) {
+          errorMessage = 'Server configuration error. Please contact the administrator.';
+        } else {
+          errorMessage = err.message;
+        }
+      }
+
       setError(errorMessage);
     } finally {
       setIsUploading(false)
