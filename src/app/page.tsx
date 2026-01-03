@@ -196,7 +196,8 @@ const Home = () => {
                 </div>
 
                 <Typography variant="h1" className="mb-6 leading-tight">
-                  Connecting People with <span className="text-primary-600">Possibilities</span> Worldwide
+                 Welcome to 
+Tzs International
                 </Typography>
 
                 <Typography variant="p" className="text-lg text-text-secondary mb-10 max-w-lg">
@@ -219,24 +220,7 @@ const Home = () => {
               <div className="relative">
                 <Card className="p-0 overflow-hidden">
                   <div className="p-8">
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="bg-primary-50 rounded-xl p-4">
-                        <Typography variant="span" className="text-2xl font-bold text-primary-700">5000+</Typography>
-                        <Typography variant="p" className="text-sm text-gray-600">Professionals Placed</Typography>
-                      </div>
-                      <div className="bg-secondary-50 rounded-xl p-4">
-                        <Typography variant="span" className="text-2xl font-bold text-secondary-700">40+</Typography>
-                        <Typography variant="p" className="text-sm text-gray-600">Countries Served</Typography>
-                      </div>
-                      <div className="bg-accent-50 rounded-xl p-4">
-                        <Typography variant="span" className="text-2xl font-bold text-accent-700">15+</Typography>
-                        <Typography variant="p" className="text-sm text-gray-600">Years Experience</Typography>
-                      </div>
-                      <div className="bg-primary-50 rounded-xl p-4">
-                        <Typography variant="span" className="text-2xl font-bold text-primary-700">200+</Typography>
-                        <Typography variant="p" className="text-sm text-gray-600">Skilled Recruiters</Typography>
-                      </div>
-                    </div>
+            
 
                     <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
                       <Typography variant="h4" className="mb-4">Why Choose Us?</Typography>

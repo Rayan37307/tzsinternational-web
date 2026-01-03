@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Tzs International (RL-040) - Connecting People with Possibilities",
+    title: "Tzs International - Best Overseas in Bangladesh",
     description:
       "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://tzsinternational.com",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tzs International (RL-040) - Connecting People with Possibilities",
+    title: "Tzs International - Best Overseas in Bangladesh",
     description:
       "Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.",
   },

@@ -32,7 +32,7 @@ export default function Hero() {
           {/* Slogan */}
           <ScrollReveal direction="up" delay={0.2}>
             <div className="inline-block px-4 py-2 bg-primary-100 rounded-full text-sm font-medium mb-6 text-primary-600">
-              Connecting People with Possibilities
+              Making dreams and aspirations come true
             </div>
           </ScrollReveal>
 
