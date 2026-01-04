@@ -189,9 +189,9 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SlideUp>
               <div>
-                <div className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-6">
-                  <Typography variant="span" className="text-primary-700 font-medium">
-                    Making dreams and aspirations come true
+                <div className="inline-block py-2 bg-primary-100 rounded-full mb-6">
+                  <Typography variant="span" className="text-primary-700 text-md font-medium">
+                    Making dreams and aspirations come true.
                   </Typography>
                 </div>
 
