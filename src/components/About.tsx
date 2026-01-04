@@ -32,7 +32,7 @@ export default function About() {
 
             <ScrollReveal direction="left" delay={0.4}>
               <p className="text-text-secondary mb-6">
-              Our Dhaka-based team is dedicated to simplifying international employment journeys through personalized service and compliance-focused guidance. We take pride in connecting Bangladeshi talent with opportunities worldwide while maintaining the highest standards of integrity and professionalism. With RL-040 license, TZS International bridges aspirations with global possibilities.
+              Our Dhaka-based team is dedicated to simplifying international employment journeys through personalized service and compliance-focused guidance. We take pride in connecting Bangladeshi talent with opportunities worldwide while maintaining the highest standards of integrity and professionalism. With   license, TZS International bridges aspirations with global possibilities.
               </p>
             </ScrollReveal>
 
@@ -40,7 +40,7 @@ export default function About() {
               <ul className="list-disc list-inside text-text-secondary space-y-2">
                 <li>Trusted since 2018</li>
                 <li>Offices in Gulshan, Dhaka</li>
-                <li>RL-040 Licensed recruitment agency</li>
+                <li>  Licensed recruitment agency</li>
                 <li>Specializes in international manpower solutions</li>
               </ul>
             </StaggerContainer>

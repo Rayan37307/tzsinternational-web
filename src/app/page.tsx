@@ -191,12 +191,12 @@ const Home = () => {
               <div>
                 <div className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-6">
                   <Typography variant="span" className="text-primary-700 font-medium">
-                    Connecting Talent & Opportunity
+                    Making dreams and aspirations come true
                   </Typography>
                 </div>
 
                 <Typography variant="h1" className="mb-6 leading-tight">
-                 Welcome to 
+                 Welcome to <br />
 Tzs International
                 </Typography>
 

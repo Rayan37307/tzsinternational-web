@@ -17,7 +17,7 @@ const Licence = () => {
   const licences = [
     {
       name: "Recruitment & Placement License",
-      number: "RL-040",
+      number: " ",
       issuedBy: "Ministry of Expatriates' Welfare & Overseas Employment",
       country: "Bangladesh",
       validity: "2023-2028",

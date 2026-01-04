@@ -44,7 +44,7 @@ const Document = () => {
   // Document list
   const documents = [
     {
-      name: "Recruitment License RL-040",
+      name: "Recruitment License  ",
       category: "Government Approvals",
       date: "2023-05-15",
       type: "PDF",
