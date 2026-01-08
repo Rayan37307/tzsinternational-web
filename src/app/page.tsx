@@ -171,7 +171,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-bg-main text-text-main">
+    <div className="min-h-screen bg-bg-main text-text-main overflow-x-hidden">
       <Navbar />
       <div className="pt-24" /> {/* Space for fixed navbar */}
 
@@ -409,7 +409,7 @@ Tzs International
     alt="founder"
     fill
     sizes="100vw"
-    className="object-cover obje"
+    className="object-cover object-center"
     priority
   />
 </div>
@@ -473,7 +473,7 @@ Tzs International
     alt="founder"
     fill
     sizes="100vw"
-    className="object-cover obje"
+    className="object-cover object-center"
     priority
   />
 </div>
@@ -560,7 +560,7 @@ Tzs International
             }
 
             .animate-scroll {
-              display: inline-flex;
+              display: flex;
               animation: scroll 30s linear infinite;
               width: 200%; /* Double the width to create seamless loop */
             }
