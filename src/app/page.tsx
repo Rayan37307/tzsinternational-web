@@ -176,80 +176,101 @@ const Home = () => {
       <div className="pt-24" /> {/* Space for fixed navbar */}
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-          <div className="absolute top-40 right-20 w-72 h-72 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-accent-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-        </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <SlideUp>
-              <div>
-                <div className="inline-block py-2 bg-primary-100 rounded-full mb-6">
-                  <Typography variant="span" className="text-primary-700 text-md font-medium">
-                    Making dreams and aspirations come true.
-                  </Typography>
-                </div>
+  {/* BACKGROUND */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800" />
 
-                <Typography variant="h1" className="mb-6 leading-tight">
-                 Welcome to <br />
-Tzs International
-                </Typography>
+    <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob" />
+    <div className="absolute top-40 right-20 w-72 h-72 bg-secondary-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animation-delay-2000" />
+    <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animation-delay-4000" />
+  </div>
 
-                <Typography variant="p" className="text-lg text-text-secondary mb-10 max-w-lg">
-                  Leading international recruitment and manpower solutions company specializing in connecting skilled professionals with global opportunities.
-                </Typography>
+  {/* CONTENT */}
+  <div className="container mx-auto px-4 relative z-10 py-24">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="xl" className="group">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button variant="outline" size="xl">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </SlideUp>
+      {/* LEFT */}
+      <SlideUp>
+        <div>
+          <div className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900 rounded-full mb-6">
+            <Typography
+              variant="span"
+              className="text-primary-700 dark:text-primary-300 text-sm font-medium"
+            >
+              Making dreams and aspirations come true.
+            </Typography>
+          </div>
 
-            <ScaleIn initialScale={0.9}>
-              <div className="relative">
-                <Card className="p-0 overflow-hidden">
-                  <div className="p-8">
-            
+          <Typography
+            variant="h1"
+            className="mb-6 leading-tight text-gray-900 dark:text-white"
+          >
+            Welcome to <br />
+            Tzs International
+          </Typography>
 
-                    <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-6">
-                      <Typography variant="h4" className="mb-4">Why Choose Us?</Typography>
-                      <ul className="space-y-3">
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
-                          <Typography variant="p">Comprehensive screening process</Typography>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 bg-secondary-600 rounded-full mr-3"></div>
-                          <Typography variant="p">Global network of opportunities</Typography>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 bg-accent-600 rounded-full mr-3"></div>
-                          <Typography variant="p">End-to-end support</Typography>
-                        </li>
-                        <li className="flex items-center">
-                          <div className="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
-                          <Typography variant="p">Transparent communication</Typography>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </ScaleIn>
+          <Typography
+            variant="p"
+            className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-lg"
+          >
+            Leading international recruitment and manpower solutions company
+            connecting skilled professionals with global opportunities.
+          </Typography>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="xl" className="group">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+
+            <Button variant="outline" size="xl">
+              Learn More
+            </Button>
           </div>
         </div>
-      </section>
+      </SlideUp>
+
+      {/* RIGHT */}
+      <ScaleIn initialScale={0.9}>
+        <Card className="p-0 overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
+          <div className="p-8">
+            <div className="bg-gray-200 dark:bg-gray-700 rounded-xl p-6">
+              <Typography
+                variant="h4"
+                className="mb-4 text-gray-900 dark:text-white"
+              >
+                Why Choose Us?
+              </Typography>
+
+              <ul className="space-y-3">
+                {[
+                  "Comprehensive screening process",
+                  "Global network of opportunities",
+                  "End-to-end support",
+                  "Transparent communication",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center">
+                    <div className="w-2 h-2 bg-primary-600 rounded-full mr-3" />
+                    <Typography
+                      variant="p"
+                      className="text-gray-800 dark:text-gray-200"
+                    >
+                      {item}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Card>
+      </ScaleIn>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Features Section */}
       <section className="py-20 bg-bg-muted">
