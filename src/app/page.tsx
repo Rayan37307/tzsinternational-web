@@ -176,45 +176,39 @@ const Home = () => {
       <div className="pt-24" /> {/* Space for fixed navbar */}
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
+      <section className="relative w-full overflow-hidden bg-[#0b0f1a]">
 
   {/* BACKGROUND */}
   <div className="absolute inset-0 z-0 pointer-events-none">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800" />
+    <div className="absolute inset-0 bg-gradient-to-br from-[#0b0f1a] via-[#111827] to-[#0b0f1a]" />
 
-    <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob" />
-    <div className="absolute top-40 right-20 w-72 h-72 bg-secondary-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animation-delay-2000" />
-    <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animation-delay-4000" />
+    <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-blob" />
+    <div className="absolute top-40 right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+    <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
   </div>
 
   {/* CONTENT */}
-  <div className="container mx-auto px-4 relative z-10 py-24">
+  <div className="container mx-auto px-4 relative z-10 py-24 lg:py-32">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
       {/* LEFT */}
       <SlideUp>
         <div>
-          <div className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900 rounded-full mb-6">
-            <Typography
-              variant="span"
-              className="text-primary-700 dark:text-primary-300 text-sm font-medium"
-            >
+          <div className="inline-block px-4 py-2 bg-indigo-500/10 rounded-full mb-6">
+            <Typography className="text-indigo-300 text-sm font-medium">
               Making dreams and aspirations come true.
             </Typography>
           </div>
 
           <Typography
             variant="h1"
-            className="mb-6 leading-tight text-gray-900 dark:text-white"
+            className="mb-6 leading-tight text-white"
           >
             Welcome to <br />
             Tzs International
           </Typography>
 
-          <Typography
-            variant="p"
-            className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-lg"
-          >
+          <Typography className="text-lg text-gray-300 mb-10 max-w-lg">
             Leading international recruitment and manpower solutions company
             connecting skilled professionals with global opportunities.
           </Typography>
@@ -225,7 +219,7 @@ const Home = () => {
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" className="border-gray-600 text-gray-200">
               Learn More
             </Button>
           </div>
@@ -234,13 +228,10 @@ const Home = () => {
 
       {/* RIGHT */}
       <ScaleIn initialScale={0.9}>
-        <Card className="p-0 overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
+        <Card className="p-0 overflow-hidden bg-[#111827]/80 backdrop-blur-md border border-white/10">
           <div className="p-8">
-            <div className="bg-gray-200 dark:bg-gray-700 rounded-xl p-6">
-              <Typography
-                variant="h4"
-                className="mb-4 text-gray-900 dark:text-white"
-              >
+            <div className="bg-white/5 rounded-xl p-6">
+              <Typography variant="h4" className="mb-4 text-white">
                 Why Choose Us?
               </Typography>
 
@@ -252,11 +243,8 @@ const Home = () => {
                   "Transparent communication",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mr-3" />
-                    <Typography
-                      variant="p"
-                      className="text-gray-800 dark:text-gray-200"
-                    >
+                    <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3" />
+                    <Typography className="text-gray-300">
                       {item}
                     </Typography>
                   </li>
@@ -270,6 +258,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+
 
 
       {/* Features Section */}
